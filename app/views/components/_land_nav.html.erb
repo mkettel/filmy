@@ -1,7 +1,13 @@
 <%# Landing Navbar. Starting with just right side sign up functinality %>
 
 <div class="nav-container">
-  <div class="nav-right">
-    <p><%= link_to "log in", new_user_registration_path, class:"gen-link" %></p>
-  </div>
+  <% if user_signed_in? %>
+    <div class="nav-right">
+      <p><%= link_to "log out", destroy_user_session_path, data: {turbo_method: :delete}, class:"gen-link" %></p>
+    </div>
+  <% else %>
+    <div class="nav-right">
+      <p><%= link_to "log in", new_user_registration_path, class:"gen-link" %></p>
+    </div>
+  <% end %>
 </div>
