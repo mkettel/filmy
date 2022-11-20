@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# Landing Page %>
+
+<%# navbar %>
+<div class="nav-container">
+  <div class="nav-right">
+    <p>Sign Up</p>
+  </div>
+</div>
+<% @users.each do |user| %>
+  <h2><%= user.first_name %></h2>
+<% end %>

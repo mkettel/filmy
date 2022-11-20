@@ -76,3 +76,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# faker gem added
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
