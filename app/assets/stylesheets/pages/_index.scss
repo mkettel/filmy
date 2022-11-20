@@ -1,2 +1,14 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+// General Link like what is used for the log in button on homepage
+.gen-link {
+  color: $light-font;
+  text-decoration: none;
+  transition: .3s;
+  &:hover {
+    color: $light-gray;
+    transition: .3s;
+  }
+}

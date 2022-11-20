@@ -8,7 +8,9 @@
 require 'faker'
 
 puts "Destroying Users"
-User.destroy_all
+Camera.destroy_all
+# User.destroy_all
+
 
 puts "Creating new Users"
 5.times do
@@ -21,4 +23,29 @@ puts "Creating new Users"
   )
   user.save
   puts "Created #{user.first_name}"
+end
+
+@owner = User.all
+
+@camera = [
+  "Contax G2",
+  "Leica M7",
+  "Nikon F4s",
+  "Canon EOS 1V",
+  "Canon AE-1",
+  "Canon A-1"
+]
+@year = [
+  1978, 1980, 1995, 1992, 1999
+]
+
+puts "Creating Cameras"
+7.times do
+  camera = Camera.new(
+    users_id: @owner.sample.id,
+    model: @camera.sample,
+    year: Faker::Number.between(from: 1970, to: 1999)
+  )
+  camera.save
+  puts "Created #{camera.model}"
 end

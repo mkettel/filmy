@@ -1,11 +1,35 @@
 <%# Landing Page %>
 
 <%# navbar %>
-<div class="nav-container">
-  <div class="nav-right">
-    <p>Sign Up</p>
+<%= render partial: "components/land_nav" %>
+
+<%# hero section %>
+<section class="main">
+  <div class="container">
+    <div class="hero-container">
+      <div class="header">
+        <h1>filmy</h1>
+      </div>
+      <div class="image">
+        <img src="" alt="">
+      </div>
+      <div class="user-action">
+        <p>Get Started</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%# How it works section %>
+<div class="container-2">
+  <div class="title">
+    <h2>How it works</h2>
   </div>
 </div>
-<% @users.each do |user| %>
-  <h2><%= user.first_name %></h2>
+
+
+<%# Form does not have all the proper fields yet %>
+<% if user_signed_in? %>
+  <h2>Welcome, <%= @user.first_name %></h2>
 <% end %>

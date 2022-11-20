@@ -1,1 +1,53 @@
 // Specific CSS for your home-page
+body {
+  font-family: $satoshi;
+}
+.main {
+  background-color: $background;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hero-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  color: $light-font;
+  padding-top: 50px;
+  padding-right: 40px;
+  h1 {
+    font-size: 64px;
+    font-weight: 400;
+  }
+}
+
+// temporary image gap to get idea of page layout
+.image {
+  height: 50vh;
+}
+
+// user action area
+.user-action {
+  display: flex;
+  justify-content: center;
+  color: $light-font;
+  padding-bottom: 20px;
+}
+
+// How it works section
+.container-2 {
+  margin: 0 auto;
+  max-width: 1100px;
+  background-color: $light-gray;
+  height: 79vh;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
