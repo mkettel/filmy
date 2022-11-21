@@ -1,0 +1,30 @@
+//------------ sign-up form ---------------
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-font;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 10px;
+}
+.title-form {
+  display: flex;
+  justify-content: center;
+}
+.form-input, .form-label, .form-check-label {
+  color: $background;
+}
+.form-control {
+  background-color: #afafaf30;
+  &:active {
+    background-color: $turquioise-ig;
+  }
+  &:focus {
+    background-color: rgb(213, 210, 210);
+  }
+}
