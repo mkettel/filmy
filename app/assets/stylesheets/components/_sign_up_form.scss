@@ -3,7 +3,7 @@
 .form-container {
   max-width: 600px;
   margin: auto;
-  height: 95vh;
+  height: 100%;   // This 100% allows for the box to resize if needed
   display: flex;
   flex-direction: column;
   background-color: $light-font;

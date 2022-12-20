@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+
   has_many :cameras, dependent: :destroy
   has_many :rolls, through: :cameras
   # Include default devise modules. Others available are:
