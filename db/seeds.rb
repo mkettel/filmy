@@ -9,7 +9,7 @@ require 'faker'
 
 puts "Destroying Users"
 Camera.destroy_all
-# User.destroy_all
+User.destroy_all
 
 
 puts "Creating new Users"
@@ -42,7 +42,7 @@ end
 puts "Creating Cameras"
 7.times do
   camera = Camera.new(
-    users_id: @owner.sample.id,
+    user_id: @owner.sample.id,
     model: @camera.sample,
     year: Faker::Number.between(from: 1970, to: 1999)
   )

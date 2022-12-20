@@ -23,12 +23,18 @@ body {
   h1 {
     font-size: 64px;
     font-weight: 400;
+    font-family: $chillax;
   }
 }
 
 // temporary image gap to get idea of page layout
 .image {
   height: 50vh;
+  // p {
+  //   font-size: 160px;
+  //   color: #D7F5FE;
+  //   text-shadow: 1px 1px 2px red, 0 10px .1em blue, 0 5px .1em blue;
+  // }
 }
 
 // user action area
