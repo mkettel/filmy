@@ -4,8 +4,12 @@
   background-color: $background;
 }
 .nav-right {
+  display: flex;
   padding: 20px 25px 10px 10px;
   margin-right: 20px;
   color: $light-font;
   font-size: 24px;
+  p {
+    margin: 0px 20px;
+  }
 }

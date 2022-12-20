@@ -7,13 +7,18 @@
 <section class="main">
   <div class="container">
     <div class="hero-container">
-      <div class="header">
-        <h1>filmy<span>-</span>j</h1>
-      </div>
       <div class="image">
-        <img src="" alt="">
+        <div class="header">
+          <h1>filmy<span>-</span>j</h1>
+        </div>
+        <%# <img src="canon_render.jpg" alt=""> %>
       </div>
     </div>
+  </div>
+  <div class="welcome">
+    <% if user_signed_in? %>
+      <h2>Welcome, <%= @current_user.first_name.capitalize %></h2>
+    <% end %>
   </div>
 </section>
 
@@ -22,37 +27,7 @@
 <div class="container-2">
   <div class="title">
     <h2>How it works</h2>
-    <p>Keep track of your settings for each photo while currently on a roll and
-    add your pictures in as soon as the roll gets developed
+    <p>filmy-j is designed to help you keep track of your exposure settings for your film photographs before they are developed. With this app you can easily record the shutter speed and aperature used for each frame of film, as well as other relevent information such as ISO, filter, lens, and description. This can be especially useful for those who shoot film regularly and want to keep track of their exposures for future reference.
     </p>
   </div>
-  <div class="landing-content row">
-    <div class="left-container col-6">
-    <%# photo here %>
-    </div>
-    <div class="right-container col-4">
-      <div class="steps">
-        <h4>Step 1:</h4>
-        <p>Input your shutter speed and aperature for your current photo
-        </p>
-      </div>
-      <div class="steps">
-        <h4>Step 2:</h4>
-        <p>Throw any details in the description to help set the scene for yourself
-        </p>
-      </div>
-      <div class="steps">
-        <h4>Step 3:</h4>
-        <p>Upload the photos directly after development into their respective
-        slots
-        </p>
-      </div>
-    </div>
-  </div>
 </div>
-
-
-<%# Form does not have all the proper fields yet %>
-<% if user_signed_in? %>
-  <h2>Welcome, <%= @current_user.first_name %></h2>
-<% end %>

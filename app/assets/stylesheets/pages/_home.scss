@@ -3,14 +3,15 @@ body {
   font-family: $satoshi;
 }
 .main {
+  position: relative;
   background-color: $background;
 }
 .container {
-  max-width: 1100px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 .hero-container {
-  height: 70vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
 }
@@ -18,8 +19,8 @@ body {
   display: flex;
   justify-content: flex-end;
   color: $light-font;
-  padding-top: 50px;
-  padding-right: 40px;
+  padding-top: 40px;
+  padding-right: 27%;
   h1 {
     font-size: 64px;
     font-weight: 400;
@@ -29,12 +30,19 @@ body {
 
 // temporary image gap to get idea of page layout
 .image {
-  height: 50vh;
-  // p {
-  //   font-size: 160px;
-  //   color: #D7F5FE;
-  //   text-shadow: 1px 1px 2px red, 0 10px .1em blue, 0 5px .1em blue;
-  // }
+  background-image: url("https://images.unsplash.com/photo-1671512011837-1d3a11886173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: inset 0px 0px 5px 5px $background;
+}
+// welcome message if the user is signed in
+.welcome {
+  position: absolute;
+  bottom: 150px;
+  left: 40%;
 }
 
 // user action area
@@ -56,21 +64,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 20px;
-  width: 40%;
-  // align-items: center;
-}
-.landing-content {
+  padding-top: 40px;
+  width: 70%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.right-container {
-  margin-top: 20px;
-}
-.steps {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 20px;
+  // align-items: center;
+  h2 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 18px;
+  }
 }
