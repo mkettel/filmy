@@ -1,77 +1,65 @@
 // Specific CSS for your home-page
-body {
-  font-family: $satoshi;
-}
-.main {
-  position: relative;
+.home {
   background-color: $background;
+  height: 100vh;
 }
-.container {
-  max-width: 1350px;
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr .5fr;
+  gap: 20px;
+  max-width: 1250px;
   margin: 0 auto;
+  padding: 40px 0px;
+  height: 100%;
 }
-.hero-container {
-  height: 90vh;
+.left-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 2px solid $magic-mint;
+  .img {
+    background-image: url("https://images.unsplash.com/photo-1671548125660-2f4ead659ef6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60");
+    background-size: cover;
+    height: 85%;
+    width: 85%;
+  }
+}
+.middle-content {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  padding: 70px 0px 0px 60px;
+  h1 {
+    font-size: 90px;
+    color: $magic-mint;
+    font-weight: 350;
+  }
+  h3 {
+    padding-top: 10px;
+    padding-left: 5px;
+    color: $magic-mint;
+    font-size: 18px;
+    font-weight: 200;
+  }
 }
-.header {
+.right-content {
   display: flex;
   justify-content: flex-end;
-  color: $light-font;
-  padding-top: 40px;
-  padding-right: 27%;
-  h1 {
-    font-size: 64px;
-    font-weight: 400;
-    font-family: $chillax;
+  .navbar-column {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
   }
 }
 
-// temporary image gap to get idea of page layout
-.image {
-  background-image: url("https://images.unsplash.com/photo-1671512011837-1d3a11886173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 90%;
-  width: 100%;
-  margin: 0 auto;
-  box-shadow: inset 0px 0px 5px 5px $background;
-}
-// welcome message if the user is signed in
-.welcome {
-  position: absolute;
-  bottom: 150px;
-  left: 40%;
-}
+.navbar-c {
+  text-decoration: none;
+  color: $magic-mint;
+  font-size: 18px;
+  transition: .3s all;
 
-// user action area
-.user-action {
-  display: flex;
-  justify-content: center;
-  color: $light-font;
-  padding-bottom: 20px;
-}
-
-// -----How it works section-----
-.container-2 {
-  margin: 0 auto;
-  max-width: 1100px;
-  background-color: $light-gray;
-  height: 79vh;
-}
-.title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 40px;
-  width: 70%;
-  margin: 0 auto;
-  // align-items: center;
-  h2 {
-    font-size: 32px;
-  }
-  p {
-    font-size: 18px;
+  &:hover {
+    color: $blue-green;
+    transition: .3s all;
   }
 }

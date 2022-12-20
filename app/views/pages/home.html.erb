@@ -1,33 +1,20 @@
 <%# Landing Page %>
 
-<%# navbar %>
-<%= render partial: "components/land_nav" %>
-
-<%# hero section %>
-<section class="main">
-  <div class="container">
-    <div class="hero-container">
-      <div class="image">
-        <div class="header">
-          <h1>filmy<span>-</span>j</h1>
-        </div>
-        <%# <img src="canon_render.jpg" alt=""> %>
+<section class="home">
+  <div class="home-container">
+    <div class="left-content">
+      <div class="img"></div>
+    </div>
+    <div class="middle-content">
+      <h1>filmy-j</h1>
+      <h3>film journal | film community</h3>
+    </div>
+    <div class="right-content">
+      <div class="navbar-column">
+        <p><%= link_to "account", root_path, class: "navbar-c" %></p>
+        <p><%= link_to "gallery", root_path, class: "navbar-c" %></p>
+        <p><%= link_to "learn", root_path, class: "navbar-c" %></p>
       </div>
     </div>
   </div>
-  <div class="welcome">
-    <% if user_signed_in? %>
-      <h2>Welcome, <%= @current_user.first_name.capitalize %></h2>
-    <% end %>
-  </div>
 </section>
-
-
-<%# How it works section %>
-<div class="container-2">
-  <div class="title">
-    <h2>How it works</h2>
-    <p>filmy-j is designed to help you keep track of your exposure settings for your film photographs before they are developed. With this app you can easily record the shutter speed and aperature used for each frame of film, as well as other relevent information such as ISO, filter, lens, and description. This can be especially useful for those who shoot film regularly and want to keep track of their exposures for future reference.
-    </p>
-  </div>
-</div>
