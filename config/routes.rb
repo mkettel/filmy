@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :cameras do
-    resources :rolls, only: [:create]
+    resources :rolls, only: [:create, :show]
   end
 end

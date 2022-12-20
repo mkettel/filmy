@@ -28,3 +28,20 @@
     background-color: rgb(213, 210, 210);
   }
 }
+.form-actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+// log-in option section
+.log-in {
+  display: flex;
+  align-items: center;
+  p {
+    padding: 0px 10px;
+    margin: 0px;
+  }
+  a {
+    text-decoration: none;
+  }
+}

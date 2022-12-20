@@ -1,3 +1,3 @@
 class Roll < ApplicationRecord
-  belongs_to :cameras
+  belongs_to :camera
 end
