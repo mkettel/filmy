@@ -1,0 +1,19 @@
+<div class="camera-nav">
+  <%= link_to root_path do %>
+    <p><span class="letter">filmy</span><span class="letter">-</span><span class="letter">j</span></p>
+  <% end %>
+</div>
+<div class="camera-container">
+  <div class="camera-content">
+    <h1>CAMERAS</h1>
+  </div>
+  <div class="selection-container">
+    <% @users_cameras.each do |camera| %>
+      <p><%= camera.model %></p>
+    <% end %>
+    <%# <p>+ camera</p> %>
+  </div>
+  <div class="camera-content">
+    <p>FILM</p>
+  </div>
+</div>

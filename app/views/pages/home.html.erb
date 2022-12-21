@@ -35,6 +35,7 @@
     <div class="right-content">
     <% if user_signed_in? %>
       <div class="navbar-column">
+        <p><%= link_to "quick note", root_path, class: "navbar-c" %></p>
         <p><%= link_to "account", cameras_path, class: "navbar-c" %></p>
         <p><%= link_to "gallery", root_path, class: "navbar-c" %></p>
         <p><%= link_to "learn", root_path, class: "navbar-c" %></p>
