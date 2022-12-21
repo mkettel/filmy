@@ -6,15 +6,38 @@
       <div class="img"></div>
     </div>
     <div class="middle-content">
-      <h1>filmy-j</h1>
-      <h3>film journal | film community</h3>
+      <div class="header-content">
+        <h1>filmy-j</h1>
+        <h3>film journal | film community</h3>
+      </div>
+      <div class="example-content">
+        <div class="button">
+          <p><%= link_to "GET STARTED", cameras_path, class: "start-button" %></p>
+        </div>
+        <div class="left-side">
+          <p>shutter speed</p>
+          <p>aperature</p>
+          <p>description</p>
+        </div>
+        <div class="right-side">
+          <p>1/125</p>
+          <p>f2.5</p>
+          <p>beautiful mountain evening after skiing looking up at the clouds for sunset</p>
+        </div>
+      </div>
     </div>
     <div class="right-content">
+    <% if user_signed_in? %>
       <div class="navbar-column">
-        <p><%= link_to "account", root_path, class: "navbar-c" %></p>
+        <p><%= link_to "account", cameras_path, class: "navbar-c" %></p>
         <p><%= link_to "gallery", root_path, class: "navbar-c" %></p>
         <p><%= link_to "learn", root_path, class: "navbar-c" %></p>
       </div>
+      <% else %>
+      <div class="navbar-column">
+        <p><%= link_to "sign up", new_user_registration_path, class: "navbar-c" %></p>
+      </div>
+      <% end %>
     </div>
   </div>
 </section>

@@ -8,7 +8,7 @@
 // This is laid out to create the separate columns for the different sections
 .home-container {
   display: grid;
-  grid-template-columns: 1fr 1fr .5fr;
+  grid-template-columns: 1fr 1fr .2fr;
   gap: 20px;
   max-width: 1250px;
   margin: 0 auto;
@@ -32,10 +32,11 @@
 .middle-content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 70px 0px 0px 60px;
   h1 {
-    font-size: 90px;
+    font-size: 100px;
     color: $magic-mint;
     font-weight: 350;
   }
@@ -46,6 +47,62 @@
     font-size: 18px;
     font-weight: 200;
   }
+  // This is the section with fake image shutter and shit
+  // the css before the hover element hide the get started button
+  .example-content {
+    position: relative;
+    color: $magic-mint;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    padding-bottom: 15%;
+    transition: .3s;
+    .button {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      opacity: 0;
+      transition: .4s;
+      a {
+        font-size: 32px;
+        text-decoration: none;
+        color: $magic-mint;
+      }
+    }
+    .right-side {
+      margin-left: 25px;
+      transition: .3s;
+    }
+    .left-side {
+      transition: .3s;
+    }
+    // this brings up the "get started" button so that the user can press it to go to their account page
+    &:hover {
+      .left-side {
+        opacity: .3;
+        transition: .3s;
+      }
+      .right-side {
+        opacity: .3;
+        transition: .3s;
+      }
+      .button {
+        transition: .4s;
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        opacity: 1;
+        z-index: 100;
+        font-size: 32px;
+        a {
+          transition: .4s;
+        color: $magic-mint;
+        text-decoration: none;
+        }
+      }
+    }
+  }
+
 }
 // Navbar sidebar container
 .right-content {
