@@ -33,7 +33,7 @@ body {
       .letter:nth-child(3) {
         transition: .3s;
         transition-delay: .3s;
-        transform: translate(-15px);
+        transform: translate(-12px);
       }
     }
   }
@@ -68,10 +68,25 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  // overflow: scroll;
   border-left: 2px solid $magic-mint;
   border-right: 2px solid $magic-mint;
-  p {
-    font-size: 56px;
+  .camera-list {
+    height: 400px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .camera-item {
+    transition: .3s;
     color: $magic-mint;
+    font-size: 56px;
+  }
+  .camera-item.active {
+    color: $blue-green;
+    transition: .3s all;
+
   }
 }

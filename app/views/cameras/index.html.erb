@@ -7,10 +7,12 @@
   <div class="camera-content">
     <h1>CAMERAS</h1>
   </div>
-  <div class="selection-container">
-    <% @users_cameras.each do |camera| %>
-      <p><%= camera.model %></p>
-    <% end %>
+  <div class="selection-container" data-controller="camera">
+    <div class="camera-list">
+      <% @users_cameras.each do |camera| %>
+        <div class="camera-item"><%= camera.model %></div>
+      <% end %>
+    </div>
     <%# <p>+ camera</p> %>
   </div>
   <div class="camera-content">
