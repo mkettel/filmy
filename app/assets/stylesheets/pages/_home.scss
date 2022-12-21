@@ -1,8 +1,11 @@
 // Specific CSS for your home-page
+
+// main container for landing with the background color set
 .home {
   background-color: $background;
   height: 100vh;
 }
+// This is laid out to create the separate columns for the different sections
 .home-container {
   display: grid;
   grid-template-columns: 1fr 1fr .5fr;
@@ -12,6 +15,7 @@
   padding: 40px 0px;
   height: 100%;
 }
+// Container that holds the image
 .left-content {
   display: flex;
   justify-content: flex-start;
@@ -24,6 +28,7 @@
     width: 85%;
   }
 }
+// Container with the title and sample content
 .middle-content {
   display: flex;
   flex-direction: column;
@@ -42,6 +47,7 @@
     font-weight: 200;
   }
 }
+// Navbar sidebar container
 .right-content {
   display: flex;
   justify-content: flex-end;
@@ -51,7 +57,7 @@
     text-align: end;
   }
 }
-
+// This is the actual navbar itself
 .navbar-c {
   text-decoration: none;
   color: $magic-mint;
