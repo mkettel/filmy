@@ -22,9 +22,9 @@ export default class extends Controller {
       elements.forEach((el) => el.classList.remove("active"));
       element.classList.toggle("active");
 
-      // updates the url for the film button
-      // filmButton.href = "<%= rolls_index_page_url(camera_id: '" + cameraId + "') %>";
+      // updates the url for the film button so it goes to the correct roll index page for the camera of choice
       filmButton.href = "cameras/" + cameraId + "/rolls";
+
 
     });
   }

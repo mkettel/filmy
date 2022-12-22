@@ -99,6 +99,9 @@
           transition: .4s;
           color: $magic-mint;
           text-decoration: none;
+          &:hover {
+            color: $blue-green;
+          }
         }
       }
     }
