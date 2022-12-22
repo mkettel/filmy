@@ -60,6 +60,10 @@ body {
       font-weight: 300;
       margin-left: 20px;
     }
+    a {
+      text-decoration: none;
+      color: $magic-mint;
+    }
   }
 }
 // second column with the camera selection

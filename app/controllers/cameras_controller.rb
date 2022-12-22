@@ -5,6 +5,11 @@ class CamerasController < ApplicationController
     @cameras = Camera.all
     @user = current_user
     @users_cameras = current_user.cameras
+
   end
 
+  def show
+    @camera = Camera.find(params[:id])
+
+  end
 end

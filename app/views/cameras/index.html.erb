@@ -10,12 +10,17 @@
   <div class="selection-container" data-controller="camera">
     <div class="camera-list">
       <% @users_cameras.each do |camera| %>
-        <div class="camera-item"><%= camera.model %></div>
+        <div class="camera-item" id="<%= camera.id %>"><%= camera.model %></div>
       <% end %>
     </div>
     <%# <p>+ camera</p> %>
   </div>
   <div class="camera-content">
-    <p>FILM</p>
+    <p><%= link_to "FILM", camera_path(@camera), id:"showButton" %></p>
   </div>
+</div>
+
+
+<div class="rolls-container">
+
 </div>
