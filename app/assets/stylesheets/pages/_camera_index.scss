@@ -87,6 +87,9 @@ body {
     transition: .3s;
     color: $magic-mint;
     font-size: 56px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .camera-item.active {
     color: $blue-green;
