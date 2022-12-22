@@ -9,6 +9,7 @@ export default class extends Controller {
     console.log("howdy");
     const container = document.querySelector(".camera-list");
     const items = document.querySelectorAll(".camera-item");
+    const film = document.querySelector(".filmButton")
 
     // This allows us to click a camera and then it gets an active class like it is selected
     // I can elaborate on this idea to get data then like rolls that the camera has as well in the future
@@ -21,23 +22,10 @@ export default class extends Controller {
       elements.forEach((el) => el.classList.remove("active"));
       element.classList.toggle("active");
 
-      loadContent(cameraId);
-    })
+      // updates the url for the film button
+      // filmButton.href = "<%= rolls_index_page_url(camera_id: '" + cameraId + "') %>";
+      filmButton.href = "cameras/" + cameraId + "/rolls";
 
-
-    // Could potentially get the data from the camera selected and use the params to navigate to the desired show page
-
-    document.getElementById("showButton").addEventListener("click", function() {
-      // get the selected camera element
-      var selectedCamera = document.querySelector(".selected");
-      if (selectedCamera) {
-        // get the camera id from the element
-        var cameraId = selectedCamera.getAttribute("camera_id");
-        // create the show page url
-        var showPageUrl = "http://example.com/cameras/" + cameraId;
-        // navigate to the show page
-        window.location = showPageUrl;
-      }
     });
   }
 }

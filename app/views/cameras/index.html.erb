@@ -16,11 +16,13 @@
     <%# <p>+ camera</p> %>
   </div>
   <div class="camera-content">
-    <p><%= link_to "FILM", camera_path(@camera), id:"showButton" %></p>
+    <p><%= link_to "FILM", "#", id:"filmButton" %></p>
   </div>
 </div>
 
 
 <div class="rolls-container">
-
+  <% @users_cameras.each do |camera| %>
+    <p><%= link_to "FILM", camera_rolls_path(camera), id:"showButton" %></p>
+    <% end %>
 </div>
