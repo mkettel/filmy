@@ -3,7 +3,7 @@
 // Loading page gif
 .preloader {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   // background: black;
   background: $background;
@@ -20,12 +20,22 @@
   // transform: opacity 1s linear;
   animation: focusInOut 1.2s linear forwards;
   h1 {
+    animation: jumpAround 1.2s linear forwards;
+    font-family: $satoshi;
     color: $magic-mint;
-    font-size: 54px;
+    font-size: 80px;
     // animation: colorchange .6s linear forwards, vanish .1s linear 1s forwards;
   }
 }
 
+// Could add this image in if i wanted and use the focus thing on it as well
+// .background {
+//   background-image: url(bali-volcano.JPG);
+//   background-size: cover;
+//   background-position: center;
+//   height: 500px;
+//   width: 800px;
+// }
 
 // out of focus animation
 @keyframes focusInOut {
@@ -49,6 +59,17 @@
   }
 }
 
-.focusInOut {
-  animation: focusInOut 1s linear;
+@keyframes jumpAround {
+  0% {
+    transform: translateX(20px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
