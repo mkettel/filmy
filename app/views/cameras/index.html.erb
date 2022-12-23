@@ -1,22 +1,26 @@
-<div class="camera-nav">
-  <%= link_to root_path do %>
-    <p><span class="letter">filmy</span><span class="letter">-</span><span class="letter">j</span></p>
-  <% end %>
-</div>
-<div class="camera-container">
-  <div class="camera-content">
-    <h1>CAMERAS</h1>
+<%= render "shared/c_preloader" %>
+
+<section class="content">
+  <div class="camera-nav">
+    <%= link_to root_path do %>
+      <p><span class="letter">filmy</span><span class="letter">-</span><span class="letter">j</span></p>
+    <% end %>
   </div>
-  <div class="selection-container" data-controller="camera">
-    <div class="camera-list">
-      <% @users_cameras.each do |camera| %>
-        <div class="camera-item" id="<%= camera.id %>"><%= camera.model %></div>
-      <% end %>
-      <div class="camera-item" id="new"><%= link_to "+", new_camera_path %></div>
+  <div class="camera-container">
+    <div class="camera-content">
+      <h1>CAMERAS</h1>
     </div>
-    <%# <p>+ camera</p> %>
+    <div class="selection-container" data-controller="camera">
+      <div class="camera-list">
+        <% @users_cameras.each do |camera| %>
+          <div class="camera-item" id="<%= camera.id %>"><%= camera.model %></div>
+        <% end %>
+        <div class="camera-item" id="new"><%= link_to "+", new_camera_path %></div>
+      </div>
+      <%# <p>+ camera</p> %>
+    </div>
+    <div class="camera-content">
+      <p><%= link_to "FILM", "#", id:"filmButton" %></p>
+    </div>
   </div>
-  <div class="camera-content">
-    <p><%= link_to "FILM", "#", id:"filmButton" %></p>
-  </div>
-</div>
+</section>

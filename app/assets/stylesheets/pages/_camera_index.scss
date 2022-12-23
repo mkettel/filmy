@@ -1,6 +1,9 @@
 body {
   background-color: $background;
 }
+.content {
+  animation: contentDelay 2s linear forwards;
+}
 // navbar
 .camera-nav {
   display: flex;
@@ -110,5 +113,18 @@ body {
     a {
       color: $background;
     }
+  }
+}
+
+
+@keyframes contentDelay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

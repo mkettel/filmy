@@ -1,0 +1,54 @@
+// css for the preloader for the camera index page
+
+// Loading page gif
+.preloader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // background: black;
+  background: $background;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.2s linear;
+  width: 100%;
+  z-index: 9999;
+  opacity: 1;
+  // transform: opacity 1s linear;
+  animation: focusInOut 1.2s linear forwards;
+  h1 {
+    color: $magic-mint;
+    font-size: 54px;
+    // animation: colorchange .6s linear forwards, vanish .1s linear 1s forwards;
+  }
+}
+
+
+// out of focus animation
+@keyframes focusInOut {
+  0% {
+    filter: blur(5px);
+    transform: scale(1);
+  }
+  25% {
+    filter: blur(4px);
+  }
+  50% {
+    filter: blur(6px);
+    transform: scale(1);
+  }
+  75% {
+    filter: blur(2px);
+  }
+  100% {
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.focusInOut {
+  animation: focusInOut 1s linear;
+}

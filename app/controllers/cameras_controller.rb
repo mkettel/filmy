@@ -13,6 +13,14 @@ class CamerasController < ApplicationController
 
   def show
     @camera = Camera.find(params[:id])
+  end
 
+  def new
+    @camera = Camera.new
+  end
+
+  def create
+    @user = current_user
+    # @camera = Camera.new(camera_params)
   end
 end

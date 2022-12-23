@@ -26,6 +26,7 @@
     background-size: cover;
     height: 85%;
     width: 85%;
+    animation: fadeIn .5s linear forwards;
   }
 }
 // Container with the title and sample content
@@ -128,5 +129,15 @@
   &:hover {
     color: $blue-green;
     transition: .3s all;
+  }
+}
+
+// fade effect for the image on the homepage
+@keyframes fadeIn {
+  from {
+    opacity: .2;
+  }
+  to {
+    opacity: 1;
   }
 }

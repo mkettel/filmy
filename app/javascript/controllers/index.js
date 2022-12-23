@@ -9,3 +9,6 @@ application.register("camera", CameraController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import LoaderController from "./loader_controller"
+application.register("loader", LoaderController)
