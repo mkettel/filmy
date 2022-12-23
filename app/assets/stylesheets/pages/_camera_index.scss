@@ -93,6 +93,11 @@ body {
     &:hover {
       cursor: pointer;
     }
+    a {
+      color: $magic-mint;
+      text-decoration: none;
+    }
+
   }
   .camera-item.active {
     color: $background;
@@ -102,5 +107,8 @@ body {
     border-top: 2px solid $magic-mint;
     background-color: $blue-green;
     // box-shadow: inset -220px 0 5px 5px $background;
+    a {
+      color: $background;
+    }
   }
 }
