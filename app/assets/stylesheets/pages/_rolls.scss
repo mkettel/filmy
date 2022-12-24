@@ -1,0 +1,60 @@
+// scss for the film rolls for each specific camera
+
+.film-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  h1 {
+    color: $magic-mint;
+    font-weight: 350;
+    font-size: 64px;
+  }
+}
+
+.rolls-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // overflow-x: scroll;
+  max-width: 95%;
+  margin: 0 auto;
+  height: 200px;
+  border-top: 2px solid $magic-mint;
+  border-bottom: 2px solid $magic-mint;
+  p {
+    padding: 0px 40px;
+    color: $magic-mint;
+    font-size: 36px;
+    font-weight: 300;
+  }
+  .roll-list {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .roll-item {
+    transition: .3s;
+    color: $magic-mint;
+    font-size: 36px;
+    // text-align: center;
+    font-weight: 300;
+    &:hover {
+      cursor: pointer;
+      color: $background;
+      background-color: $blue-green;
+      a {
+        color: $background;
+      }
+    }
+    a {
+      color: $magic-mint;
+      text-decoration: none;
+    }
+  }
+}

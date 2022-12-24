@@ -1,4 +1,17 @@
-<h1>rolls</h1>
-<% @cameras_rolls.each do |roll| %>
-  <p><%= roll.name %></p>
-<% end %>
+<div class="camera-nav">
+  <%= link_to root_path do %>
+    <p><span class="letter">filmy</span><span class="letter">-</span><span class="letter">j</span></p>
+  <% end %>
+</div>
+
+<div class="film-header-container">
+  <h1><%= @camera.model.upcase %> FILM</h1>
+</div>
+
+<div class="rolls-container" data-controller="camera">
+  <div class="roll-list">
+    <% @cameras_rolls.each do |roll| %>
+      <p class="roll-item"><%= roll.name %></p>
+    <% end %>
+  </div>
+</div>

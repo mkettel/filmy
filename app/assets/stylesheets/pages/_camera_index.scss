@@ -21,7 +21,7 @@ body {
   a {
     color: $magic-mint;
     text-decoration: none;
-    font-size: 48px;
+    font-size: 46px;
     font-family: $satoshi;
     &:hover {
       transition: .3s;
@@ -55,15 +55,16 @@ body {
     h1 {
       font-size: 64px;
       color: $magic-mint;
-      font-weight: 300;
+      font-weight: 350;
     }
     p {
       font-size: 64px;
       color: $magic-mint;
-      font-weight: 300;
+      font-weight: 350;
       margin-left: 20px;
     }
     a {
+      font-weight: 350;
       text-decoration: none;
       color: $magic-mint;
     }
@@ -92,6 +93,7 @@ body {
     color: $magic-mint;
     font-size: 56px;
     text-align: center;
+    font-weight: 300;
     width: 100%;
     &:hover {
       cursor: pointer;
@@ -111,9 +113,11 @@ body {
     color: $background;
     transition: .3s all;
     letter-spacing: 1.2px;
-    border-bottom: 2px solid $magic-mint;
-    border-top: 2px solid $magic-mint;
+    border-bottom: 3px solid $magic-mint;
+    border-top: 3px solid $magic-mint;
     background-color: $blue-green;
+    box-shadow: inset 0px 0px 2px 2px $background;
+
     // box-shadow: inset -220px 0 5px 5px $background;
     a {
       color: $background;
