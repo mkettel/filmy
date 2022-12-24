@@ -8,7 +8,7 @@
   <h1><%= @camera.model.upcase %> FILM</h1>
 </div>
 
-<div class="rolls-container" data-controller="camera">
+<div class="rolls-container" data-controller="rolls">
   <div class="roll-list">
     <% @cameras_rolls.each do |roll| %>
       <p class="roll-item"><%= roll.name %></p>

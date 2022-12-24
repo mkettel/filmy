@@ -25,36 +25,49 @@
   border-top: 2px solid $magic-mint;
   border-bottom: 2px solid $magic-mint;
   p {
-    padding: 0px 40px;
-    color: $magic-mint;
-    font-size: 36px;
-    font-weight: 300;
+    // padding: 0px 40px;
+    // color: $magic-mint;
+    // font-size: 36px;
+    // font-weight: 300;
   }
   .roll-list {
-    height: 100%;
-    overflow: scroll;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    height: 100%;
+    display: flex;
+
   }
   .roll-item {
-    transition: .3s;
-    color: $magic-mint;
+    // width: 100%;
     font-size: 36px;
-    // text-align: center;
-    font-weight: 300;
+    color: $magic-mint;
+    gap: 10px;
+    justify-content: center;
+    padding: 70px 0px;
+    margin-bottom: 0px;
+    width: 50%;
+    text-align: center;
     &:hover {
       cursor: pointer;
       color: $background;
       background-color: $blue-green;
-      a {
-        color: $background;
-      }
     }
+  }
+
+  .roll-item.active {
+    color: $background;
+    transition: .3s all;
+    letter-spacing: 1.2px;
+    border-bottom: 3px solid $magic-mint;
+    border-top: 3px solid $magic-mint;
+    background-color: $blue-green;
+    box-shadow: inset 0px 0px 2px 2px $background;
+
+    // box-shadow: inset -220px 0 5px 5px $background;
     a {
-      color: $magic-mint;
-      text-decoration: none;
+      color: $background;
     }
   }
 }
