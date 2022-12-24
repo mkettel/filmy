@@ -95,6 +95,11 @@ body {
     width: 100%;
     &:hover {
       cursor: pointer;
+      color: $background;
+      background-color: $blue-green;
+      a {
+        color: $background;
+      }
     }
     a {
       color: $magic-mint;
