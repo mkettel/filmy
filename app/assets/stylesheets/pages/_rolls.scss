@@ -21,7 +21,7 @@
   // overflow-x: scroll;
   max-width: 95%;
   margin: 0 auto;
-  height: 200px;
+  height: 100px;
   border-top: 2px solid $magic-mint;
   border-bottom: 2px solid $magic-mint;
   .roll-list {
@@ -39,14 +39,16 @@
     color: $magic-mint;
     gap: 10px;
     justify-content: center;
-    padding: 70px 0px;
+    padding: 20px 0px;
     margin-bottom: 0px;
     width: 50%;
     text-align: center;
+    transition: .3s;
     &:hover {
       cursor: pointer;
       color: $background;
       background-color: $blue-green;
+
     }
   }
 
@@ -59,9 +61,7 @@
     border-left: 3px solid $magic-mint;
     border-right: 3px solid $magic-mint;
     background-color: $blue-green;
-    box-shadow: inset 0px 0px 2px 2px $background;
-
-    // box-shadow: inset -220px 0 5px 5px $background;
+    box-shadow: inset 0px 0px 3px 3px $background;
     a {
       color: $background;
     }
