@@ -128,6 +128,18 @@ body {
 
 
 // ------ NEW.HTML.ERB ----------
+.back {
+  margin: 20px 30px;
+  .back-button {
+    transition: .3s;
+    color: $magic-mint;
+    text-decoration: none;
+    &:hover {
+      transition: .3s;
+      color: $blue-green;
+    }
+  }
+}
 // styling for the form on the new camera page
 .new-form {
   margin: 0 auto;
@@ -143,14 +155,24 @@ body {
     }
     .form-input {
       color: $magic-mint;
+      // border: 2px solid $magic-mint;
+      height: 50px;
+      background-color: transparent;
       &:focus {
         background-color: $blue-green;
         color: $background;
       }
     }
     .btn {
+      transition: .3s;
+      padding-left: 0px;
+      margin-top: 10px;
       color: $magic-mint;
       font-size: 18px;
+      &:hover {
+        transition: .3s;
+        color: $blue-green;
+      }
     }
   }
 
