@@ -1,69 +1,86 @@
-// scss for the film rolls for each specific camera
+  // scss for the film rolls for each specific camera
 
-.film-header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  h1 {
-    color: $magic-mint;
-    font-weight: 350;
-    font-size: 64px;
+  body {
+    position: relative;
   }
-}
-
-.rolls-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  // overflow-x: scroll;
-  max-width: 95%;
-  margin: 0 auto;
-  height: 100px;
-  border-top: 2px solid $magic-mint;
-  border-bottom: 2px solid $magic-mint;
-  .roll-list {
-    width: 100%;
-    align-items: center;
-    justify-items: center;
-    justify-content: space-around;
-    height: 100%;
-    display: flex;
-
-  }
-  .roll-item {
-    // width: 100%;
-    font-size: 36px;
-    color: $magic-mint;
-    gap: 10px;
-    justify-content: center;
-    padding: 20px 0px;
-    margin-bottom: 0px;
-    width: 50%;
-    text-align: center;
-    transition: .3s;
-    &:hover {
-      cursor: pointer;
-      color: $background;
-      background-color: $blue-green;
-
-    }
-  }
-
-  .roll-item.active {
-    color: $background;
-    transition: .3s all;
-    letter-spacing: 1.2px;
-    // border-bottom: 3px solid $magic-mint;
-    // border-top: 3px solid $magic-mint;
-    border-left: 3px solid $magic-mint;
-    border-right: 3px solid $magic-mint;
-    background-color: $blue-green;
-    box-shadow: inset 0px 0px 3px 3px $background;
+  // back to cameras button
+  .back-button {
     a {
-      color: $background;
+      color: $magic-mint;
+      text-decoration: none;
     }
   }
-}
+
+  .film-header-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    h1 {
+      color: $magic-mint;
+      font-weight: 350;
+      font-size: 64px;
+    }
+  }
+
+  .rolls-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // overflow-x: scroll;
+    max-width: 95%;
+    margin: 0 auto;
+    height: 100px;
+    border-top: 2px solid $magic-mint;
+    border-bottom: 2px solid $magic-mint;
+    .roll-list {
+      width: 100%;
+      align-items: center;
+      justify-items: center;
+      justify-content: space-around;
+      height: 100%;
+      display: flex;
+
+    }
+    .roll-item {
+      // width: 100%;
+      font-size: 36px;
+      color: $magic-mint;
+      gap: 10px;
+      justify-content: center;
+      padding: 20px 0px;
+      margin-bottom: 0px;
+      width: 50%;
+      text-align: center;
+      transition: .3s;
+      font-weight: 300;
+      &:hover {
+        cursor: pointer;
+        color: $background;
+        background-color: $blue-green;
+      }
+      a {
+        color: $magic-mint;
+        text-decoration: none;
+        font-weight: 300;
+      }
+    }
+
+    .roll-item.active {
+      color: $background;
+      transition: .3s all;
+      letter-spacing: 1.2px;
+      // border-bottom: 3px solid $magic-mint;
+      // border-top: 3px solid $magic-mint;
+      border-left: 3px solid $magic-mint;
+      border-right: 3px solid $magic-mint;
+      background-color: $blue-green;
+      box-shadow: inset 0px 0px 2px 2px $background;
+      a {
+        color: $background;
+      }
+    }
+  }

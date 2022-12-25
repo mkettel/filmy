@@ -4,6 +4,10 @@
   <% end %>
 </div>
 
+<div class="back-button">
+  <%= link_to "back to cameras", cameras_path %>
+</div>
+
 <div class="film-header-container">
   <h1><%= @camera.model.upcase %> FILM</h1>
 </div>
@@ -13,5 +17,6 @@
     <% @cameras_rolls.each do |roll| %>
       <p class="roll-item" id="<%= roll.id %>" ><%= roll.name %></p>
     <% end %>
+      <div class="roll-item" id="new"><%= link_to "+", new_camera_path %></div>
   </div>
 </div>
