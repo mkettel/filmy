@@ -22,8 +22,9 @@ class CamerasController < ApplicationController
   def create
     @user = current_user
     @camera = Camera.new(camera_params)
+    @camera.user = current_user
     if @camera.save
-      redirect_to camera_path
+      redirect_to cameras_path
     else
       render :new, status: :unprocessable_entity
     end

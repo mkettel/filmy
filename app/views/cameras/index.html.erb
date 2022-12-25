@@ -17,16 +17,6 @@
         <% end %>
         <div class="camera-item" id="new"><%= link_to "+", new_camera_path %></div>
       </div>
-      <%# <p>+ camera</p> %>
-      <%# Modal for added a camera %>
-      <form id="new-camera-form" style="display: none;">
-        <label for="model">Model:</label><br>
-        <input type="text" id="model" name="model"><br>
-        <label for="year">Year:</label><br>
-        <input type="integer" id="year" name="year"><br>
-        <input type="submit" value="Create">
-      <button id="new-camera-button">Add Camera</button>
-      </form>
     </div>
     <div class="camera-content">
       <p><%= link_to "FILM", "#", id:"filmButton" %></p>

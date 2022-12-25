@@ -127,6 +127,36 @@ body {
 }
 
 
+// ------ NEW.HTML.ERB ----------
+// styling for the form on the new camera page
+.new-form {
+  margin: 0 auto;
+  max-width: 500px;
+  .form-content {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: $magic-mint;
+      font-weight: 350;
+      text-align: center;
+    }
+    .form-input {
+      color: $magic-mint;
+      &:focus {
+        background-color: $blue-green;
+        color: $background;
+      }
+    }
+    .btn {
+      color: $magic-mint;
+      font-size: 18px;
+    }
+  }
+
+}
+
+// amimations
 @keyframes contentDelay {
   0% {
     opacity: 0;
