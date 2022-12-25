@@ -21,6 +21,18 @@ class CamerasController < ApplicationController
 
   def create
     @user = current_user
-    # @camera = Camera.new(camera_params)
+    @camera = Camera.new(camera_params)
+    if @camera.save
+      redirect_to camera_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+
+  private
+
+  def camera_params
+    params.require(:camera).permit(:model, :year)
   end
 end
