@@ -2,12 +2,14 @@
 
   .film-header-container {
     position: relative;
-    max-width: 1200px;
+    max-width: 95%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
+    // background-color: $blue-green;
+    // box-shadow: inset 0px -10px 0px black;
     h1 {
       color: $magic-mint;
       font-weight: 350;
@@ -25,6 +27,7 @@
     height: 100px;
     border-top: 2px solid $magic-mint;
     border-bottom: 2px solid $magic-mint;
+    // box-shadow: 0px 5px 0px 0px rgb(19, 19, 19), 0px -5px 0px 0px rgb(19, 19, 19);
     .roll-list {
       width: 100%;
       align-items: center;
@@ -46,6 +49,7 @@
       text-align: center;
       transition: .3s;
       font-weight: 300;
+      text-decoration: none;
       &:hover {
         cursor: pointer;
         color: $background;
@@ -55,6 +59,9 @@
         color: $magic-mint;
         text-decoration: none;
         font-weight: 300;
+      }
+      p {
+        margin: 0px;
       }
     }
 
