@@ -35,6 +35,13 @@
       justify-content: space-around;
       height: 100%;
       display: flex;
+      p {
+        margin: 0px;
+      }
+      a {
+        text-decoration: none;
+        color: $magic-mint;
+      }
 
     }
     .roll-item {
