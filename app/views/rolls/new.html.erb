@@ -1,0 +1,15 @@
+<div class="back">
+  <%= link_to "BACK TO ROLLS", camera_rolls_path, class: "back-button" %>
+</div>
+<!-- Modal for adding a camera -->
+<div class="new-form">
+  <div class="form-content">
+    <h1>ADD FILM ROLL</h1>
+    <%= simple_form_for @roll, url: camera_rolls_path, method: :post do |f| %>
+      <%= f.input :name, placeholder: "Name", input_html: { class: "form-input" } %>
+      <%= f.input :roll_type, as: :integer, placeholder: "Roll Type", input_html: { class: "form-input" } %>
+      <%= f.button :submit, "CREATE" %>
+      <%# <button id="new-camera-button">Close</button> %>
+    <% end %>
+  </div>
+</div>
