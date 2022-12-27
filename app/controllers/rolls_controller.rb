@@ -16,10 +16,10 @@ class RollsController < ApplicationController
     @camera = Camera.find(params[:camera_id]) #gets the camera with the id needed
     @user = current_user  # sets the current user
     @roll = Roll.new(roll_params) # creates a new roll with the proper parameters hidded
-    @roll.user = current_user
+    # @roll.user = current_user
     @roll.camera = Camera.find(params[:camera_id])
     if @roll.save
-      redirect_to cameras_rolls_path
+      redirect_to camera_rolls_path
     else
       render :new, status: :unprocessable_entity
     end
