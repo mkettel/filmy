@@ -56,13 +56,13 @@
     color: $magic-mint;
     display: grid;
     grid-template-columns: .5fr 1fr;
-    padding-bottom: 15%;
+    padding-bottom: 20%;
     transition: .3s;
     .button {
       position: absolute;
-      top: 50px;
-      left: 40px;
-      opacity: 0;
+      top: 150px;
+      left: 0px;
+      opacity: 1;
       transition: .4s;
       a {
         font-size: 28px;
@@ -80,19 +80,19 @@
     // this brings up the "get started" button so that the user can press it to go to their account page
     &:hover {
       .left-side {
-        opacity: .3;
+        opacity: .8;
         transition: .3s;
       }
       .right-side {
-        opacity: .3;
+        opacity: .8s;
         transition: .3s;
       }
       .button {
         transition: .4s;
         display: block;
         position: absolute;
-        top: 30px;
-        left: 40px;
+        top: 150px;
+        left: 0px;
         opacity: 1;
         z-index: 100;
         font-size: 28px;
