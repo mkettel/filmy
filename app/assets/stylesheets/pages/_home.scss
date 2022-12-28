@@ -60,12 +60,13 @@
     transition: .3s;
     .button {
       position: absolute;
-      top: 150px;
+      top: 160px;
       left: 0px;
       opacity: 1;
       transition: .4s;
       a {
-        font-size: 28px;
+        font-size: 32px;
+        font-weight: 400;
         text-decoration: none;
         color: $magic-mint;
       }
@@ -91,7 +92,7 @@
         transition: .4s;
         display: block;
         position: absolute;
-        top: 150px;
+        top: 160px;
         left: 0px;
         opacity: 1;
         z-index: 100;

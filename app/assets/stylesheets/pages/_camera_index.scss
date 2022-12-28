@@ -46,7 +46,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
   height: 90vh;
   padding-bottom: 50px;
   .camera-content {
@@ -54,6 +54,8 @@ body {
     justify-content: center;
     align-items: center;
     h1 {
+      font-family: $clash;
+      text-align: center;
       font-size: 64px;
       color: $magic-mint;
       font-weight: 350;
@@ -94,7 +96,7 @@ body {
     // font-family: $satoshi;
     transition: .3s;
     color: $magic-mint;
-    font-size: 56px;
+    font-size: 48px;
     text-align: center;
     font-weight: 300;
     width: 100%;
