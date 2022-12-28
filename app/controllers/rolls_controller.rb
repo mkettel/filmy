@@ -29,6 +29,7 @@ class RollsController < ApplicationController
     @camera = Camera.find(params[:camera_id]) # should find the correct camera
     @user = current_user # assigns the current user
     @roll.camera = Camera.find(params[:camera_id]) # should find the roll that is clikced on
+    render partial: 'roll', locals: { roll: @roll }
   end
 
   private

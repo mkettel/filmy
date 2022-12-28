@@ -13,10 +13,10 @@
 </div>
 
 <div class="rolls-container" data-controller="film">
-  <div class="roll-list">
+  <div class="roll-list" data-controller="roll">
     <% @cameras_rolls.each do |roll| %>
       <%# <%= link_to camera_roll_path(id: roll.id) do %>
-        <p class="roll-item" id="<%= roll.id %>" ><%= roll.name %></p>
+        <p class="roll-item" id="<%= roll.id %>" onclick="showRoll(<%= roll.id %>)" ><%= roll.name %></p>
       <%# <% end %>
     <% end %>
     <%= link_to new_camera_roll_path, class: "roll-item" do %>
