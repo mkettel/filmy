@@ -15,24 +15,13 @@ export default class extends Controller {
         var cameraId = parts[1];
         var rollId = parts[2];
 
-        // Make the AJAX request to fetch the data for the roll
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", '/cameras/' + cameraId + '/rolls/' + rollId, true);
-        xhr.setRequestHeader("Content-Type", "application/html");
-        xhr.onload = function (e) {
-          if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-              // Replace the content of the rolls-content-container element with the data returned from the server
-              document.querySelector('.rolls-content-container').innerHTML = xhr.responseText;
-            } else {
-              console.error(xhr.statusText);
-            }
-          }
-        };
-        xhr.onerror = function (e) {
-          console.error(xhr.statusText);
-        };
-        xhr.send(null);
+        // this is the fetch request for the ajax to get the various roll content
+        fetch('/cameras/' + cameraId + '/rolls/' + rollId)
+          .then(response => response.text())
+          .then(html => {
+            document.querySelector('.rolls-content-container').innerHTML = html;
+          })
+          .catch(error => console.error(error));
       });
     }
   }

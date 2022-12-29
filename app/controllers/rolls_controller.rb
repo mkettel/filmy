@@ -28,12 +28,13 @@ class RollsController < ApplicationController
   def show
     @camera = Camera.find(params[:camera_id]) # should find the correct camera
     @user = current_user # assigns the current user
-    @roll.camera = Camera.find(params[:camera_id]) # should find the roll that is clikced on
     @roll = Roll.find(params[:id])
+    @roll.camera_id = Camera.find(params[:camera_id]) # should find the roll that is clikced on
     respond_to do |format|
       format.html
       format.js
     end
+    render partial: 'roll'
   end
 
   private
