@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
+  # this route should allow the show action to be accessible
+  # get '/rolls/:id', to: 'rolls#show'
+  get '/cameras/:camera_id/rolls/:id', to: 'rolls#show'
   # Defines the root path route ("/")
   # root "articles#index"
   resources :cameras do
