@@ -96,6 +96,7 @@
   .main-roll-container {
     margin-top: 5%;
     h3 {
+      margin-bottom: 40px;
       color: $magic-mint;
     }
     p {
@@ -104,7 +105,7 @@
     .frame-container {
       padding: 10px;
       border: 2px solid $magic-mint;
-      margin: 10px 0px;
+      margin: 20px 0px;
       display: flex;
     }
     .photo {

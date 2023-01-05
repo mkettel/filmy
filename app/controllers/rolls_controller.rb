@@ -37,6 +37,12 @@ class RollsController < ApplicationController
     render partial: 'roll'
   end
 
+  def upload_image
+    frame_id = params[:frame_id]
+    # Save the uploaded image to a database or file storage service
+    # ...
+  end
+
   private
 
   def roll_params
