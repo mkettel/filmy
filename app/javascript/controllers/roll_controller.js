@@ -1,5 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
+// This js controller is responsible for the AJAX request functionality for displaying the roll's frames when a roll is selected
+
 // Connects to data-controller="roll"
 export default class extends Controller {
   connect() {

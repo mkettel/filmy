@@ -121,4 +121,15 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
   }
+  .input-fields {
+    display: flex;
+  }
+  .frame-input {
+    background-color: transparent;
+    color: $magic-mint;
+    border: none;
+    padding: 0px;
+    margin: 0px 10px;
+    height: 25px;
+  }
 }

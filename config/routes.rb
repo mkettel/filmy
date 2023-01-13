@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # this route should allow the show action to be accessible
   # get '/rolls/:id', to: 'rolls#show'
   get '/cameras/:camera_id/rolls/:id', to: 'rolls#show'
+
+  # this should make the upload image a POST to the roll database
   post '/upload_image/:frame_id', to: 'rolls#upload_image'
   # Defines the root path route ("/")
   # root "articles#index"
