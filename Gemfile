@@ -79,3 +79,6 @@ end
 
 # faker gem added
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+
+# carrierwave file upload handler gem
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
