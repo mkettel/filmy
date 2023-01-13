@@ -30,3 +30,6 @@ export default class extends Controller {
     });
   }
 }
+
+
+// Instead of having a button that says "go to film" i can just have the picture of the camera also be clickable and that is what the user can use to navigate to the camera specific rolls
