@@ -104,7 +104,7 @@
   }
   .frame-container {
     padding: 10px;
-    border: 2px solid $magic-mint;
+    // border: 2px solid $magic-mint;
     // border-bottom: 1px solid $magic-mint;
     margin: 20px 0px;
     display: flex;
@@ -112,11 +112,13 @@
   .photo {
     display: flex;
     align-items: center;
+    border-right: 1px solid $magic-mint;
   }
 }
 
 .r-content {
   width: 100%;
+  margin-left: 20px;
   .frame-details {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
