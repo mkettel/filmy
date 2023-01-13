@@ -90,7 +90,7 @@
 
 // Roll Content Area
 .rolls-content-container {
-  max-width: 1300px;
+  max-width: 95%;
   margin: 0 auto;
 }
 .main-roll-container {
@@ -105,11 +105,13 @@
   .frame-container {
     padding: 10px;
     border: 2px solid $magic-mint;
+    // border-bottom: 1px solid $magic-mint;
     margin: 20px 0px;
     display: flex;
   }
   .photo {
-    margin-top: 2%;
+    display: flex;
+    align-items: center;
   }
 }
 

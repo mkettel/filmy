@@ -29,7 +29,7 @@ class RollsController < ApplicationController
     @camera = Camera.find(params[:camera_id]) # should find the correct camera
     @user = current_user # assigns the current user
     @roll = Roll.find(params[:id])
-    @roll.camera_id = Camera.find(params[:camera_id]) # should find the roll that is clikced on
+    @roll.camera_id = Camera.find(params[:camera_id]) # should find the roll that is clikced on (used for ajax request)
     respond_to do |format|
       format.html
       format.js
@@ -40,7 +40,7 @@ class RollsController < ApplicationController
   def upload_image
     frame_id = params[:frame_id]
     # Save the uploaded image to a database or file storage service
-    # ...
+
   end
 
   private
@@ -50,3 +50,7 @@ class RollsController < ApplicationController
   end
 
 end
+
+# Psuedocode for how to add data to a roll
+# I added the uploaded files class to the schema so i will be able to use that to get access to the proper files and data needed for the rolls
+# I left off at a point where i have a frame_id that i think i need to add to the class of the roll perhaps? i need chatgpt to help lol
