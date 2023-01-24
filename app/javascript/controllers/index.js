@@ -10,6 +10,9 @@ application.register("camera", CameraController)
 import FilmController from "./film_controller"
 application.register("film", FilmController)
 
+import FrameController from "./frame_controller"
+application.register("frame", FrameController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
