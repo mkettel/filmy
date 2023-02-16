@@ -9,6 +9,7 @@
         <input type="file" class="upload-button" data-frame-id="1" onchange="uploadImage(event)">
       </div>
       <div class="r-content">
+      <form action=" <%= photos_path %> " method="post">
         <h3>Photo 1</h3>
         <div class="frame-details">
           <div class="camera-settings-section">
@@ -26,6 +27,7 @@
           </div>
         </div>
       </div>
+      </form>
     </div>
         <div class="frame-container">
       <div class="photo">

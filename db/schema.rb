@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_13_172918) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_16_030614) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_13_172918) do
     t.datetime "updated_at", null: false
     t.string "drawing"
     t.index ["user_id"], name: "index_cameras_on_user_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer "roll_id"
+    t.integer "frame_number"
+    t.string "shutter_speed"
+    t.string "aperture"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "rolls", force: :cascade do |t|
