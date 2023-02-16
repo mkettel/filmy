@@ -8,7 +8,9 @@ class PhotosController < ApplicationController
     @aperture = params[:aperture]
     @description = params[:description]
     @photo = roll.photos.build(:frame_number, :shutter_speed, :aperture, :description)
-    @photo.save
+    if @photo.save
+      raise
+    end
   end
 
 
