@@ -7,7 +7,7 @@ class PhotosController < ApplicationController
     @shutter_speed = params[:shutter_speed]
     @aperture = params[:aperture]
     @description = params[:description]
-    @photo = roll.photos.build(:frame_number, :shutter_speed, :aperture, :description)
+    @photo = @roll.photos.build(photo_params)
     if @photo.save
       raise
     end
@@ -17,7 +17,7 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photos).permit(:frame_number, :shutter_speed, :aperture, :description)
+    params.require(:photo).permit(:frame_number, :shutter_speed, :aperture, :description)
   end
 
 end
