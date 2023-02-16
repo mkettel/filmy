@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :cameras do
     resources :rolls, only: [:new, :create, :show, :index, :update]
   end
+  resources :photos, only: [:create]
 end
