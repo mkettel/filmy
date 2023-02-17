@@ -6,101 +6,15 @@
   <div class="photo-row-container">
     <h3>Film Type: <%=  @roll.roll_type.upcase %></h3>
     <form action="<%= camera_roll_photos_path(@camera, @roll) %>" method="post">
-      <div class="frame-container">
-        <div class="photo">
-          <input type="file" class="upload-button" data-frame-id="1" onchange="uploadImage(event)">
-        </div>
-        <div class="r-content">
-          <h3>Photo 1</h3>
-          <div class="frame-details">
-            <div class="camera-settings-section">
-              <div class="input-fields">
-                <p>Shutter Speed</p><input type="text" placeholder="ENTER" id="shutter-speed-1" class="frame-input">
-              </div>
-              <div class="input-fields">
-                <p>Aperture</p><input type="text" placeholder="ENTER" id="aperature-1" class="frame-input">
-              </div>
-            </div>
-            <div class="description-section">
-              <div class="input-fields">
-                <p>Description</p><input type="text" placeholder="ENTER" id="description-1" class="frame-input">
-              </div>
-            </div>
+      <div class="frame-grid-container">
+        <div class="frame-container">
+          <div class="photo">
+            <input type="file" class="upload-button" data-frame-id="1" onchange="uploadImage(event)">
+          </div>
+          <div class="r-content">
+            <h3>Photo 1</h3>
           </div>
         </div>
-      </div>
-
-          <div class="frame-container">
-        <div class="photo">
-          <input type="file" class="upload-button" data-frame-id="1">
-        </div>
-        <div class="r-content">
-          <h3>Photo 2</h3>
-          <div class="frame-details">
-            <div class="camera-settings-section">
-              <div class="input-fields">
-                <p>Shutter Speed</p><input type="text" placeholder="ENTER" id="shutter-speed-1" class="frame-input">
-              </div>
-              <div class="input-fields">
-                <p>Aperature</p><input type="text" placeholder="ENTER" id="aperature-1" class="frame-input">
-              </div>
-            </div>
-            <div class="description-section">
-              <div class="input-fields">
-                <p>Description</p><input type="text" placeholder="ENTER" id="description-1" class="frame-input">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-          <div class="frame-container">
-        <div class="photo">
-          <input type="file" class="upload-button" data-frame-id="1">
-        </div>
-        <div class="r-content">
-          <h3>Photo 3</h3>
-          <div class="frame-details">
-            <div class="camera-settings-section">
-              <div class="input-fields">
-                <p>Shutter Speed</p><input type="text" placeholder="ENTER" id="shutter-speed-1" class="frame-input">
-              </div>
-              <div class="input-fields">
-                <p>Aperature</p><input type="text" placeholder="ENTER" id="aperature-1" class="frame-input">
-              </div>
-            </div>
-            <div class="description-section">
-              <div class="input-fields">
-                <p>Description</p><input type="text" placeholder="ENTER" id="description-1" class="frame-input">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-          <div class="frame-container">
-        <div class="photo">
-          <input type="file" class="upload-button" data-frame-id="1">
-        </div>
-        <div class="r-content">
-          <h3>Photo 4</h3>
-          <div class="frame-details">
-            <div class="camera-settings-section">
-              <div class="input-fields">
-                <p>Shutter Speed</p><input type="text" placeholder="ENTER" id="shutter-speed-1" class="frame-input">
-              </div>
-              <div class="input-fields">
-                <p>Aperature</p><input type="text" placeholder="ENTER" id="aperature-1" class="frame-input">
-              </div>
-            </div>
-            <div class="description-section">
-              <div class="input-fields">
-                <p>Description</p><input type="text" placeholder="ENTER" id="description-1" class="frame-input">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="save-button">
-        <button type="submit" id="save-button">SAVE</button>
       </div>
     </form>
   </div>

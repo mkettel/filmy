@@ -102,6 +102,10 @@
   p {
     color: $magic-mint;
   }
+  .frame-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   .frame-container {
     padding: 10px;
     // border: 2px solid $magic-mint;
