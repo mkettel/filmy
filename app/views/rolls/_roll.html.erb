@@ -7,12 +7,13 @@
     <h3>Film Type: <%=  @roll.roll_type.upcase %></h3>
     <form action="<%= camera_roll_photos_path(@camera, @roll) %>" method="post">
       <div class="frame-grid-container">
-        <div class="frame-container">
-          <div class="photo">
-            <input type="file" class="upload-button" data-frame-id="1" onchange="uploadImage(event)">
-          </div>
+        <div class="frame-container" data-controller="frame">
           <div class="r-content">
-            <h3>Photo 1</h3>
+            <h3>1</h3>
+          </div>
+          <div class="photo">
+            <input type="file" id="image" name="image" accept="image/*" class="upload-button" data-frame-id="1" onchange="uploadImage(event)">
+            <img id="image-preview" src="#" alt="Preview Image" style="display:none">
           </div>
         </div>
       </div>

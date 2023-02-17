@@ -1,5 +1,6 @@
-// scss for the film rolls for each specific camera
 
+// scss for the film rolls for each specific camera
+// Top Section
 .film-header-container {
   position: relative;
   max-width: 95%;
@@ -89,6 +90,7 @@
 }
 
 // Roll Content Area
+
 .rolls-content-container {
   max-width: 95%;
   margin: 0 auto;
@@ -115,28 +117,21 @@
   }
   .photo {
     display: flex;
-    align-items: center;
-    border-right: 1px solid $magic-mint;
+    flex-direction: column-reverse;
+    // align-items: center;
+    // border-right: 1px solid $magic-mint;
   }
+  #image-preview {
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    padding: 10px;
+  }
+
 }
 
 .r-content {
   width: 100%;
   margin-left: 20px;
   padding: 10px 0px;
-  .frame-details {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-  }
-  .input-fields {
-    display: flex;
-  }
-  .frame-input {
-    background-color: transparent;
-    color: $magic-mint;
-    border: none;
-    padding: 0px;
-    margin: 0px 10px;
-    height: 25px;
-  }
 }
