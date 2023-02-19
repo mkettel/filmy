@@ -6,14 +6,29 @@
   <div class="photo-row-container">
     <h3>Film Type: <%=  @roll.roll_type.upcase %></h3>
     <form action="<%= camera_roll_photos_path(@camera, @roll) %>" method="post">
-      <div class="frame-grid-container">
-        <div class="frame-container" data-controller="frame">
-          <div class="r-content">
-            <h3>1</h3>
-          </div>
+      <div class="frame-grid-container" data-controller="frame">
+        <div class="frame-container">
           <div class="photo">
-            <input type="file" id="image" name="image" accept="image/*" class="upload-button" data-frame-id="1" onchange="uploadImage(event)">
-            <img id="image-preview" src="#" alt="Preview Image" style="display:none">
+            <input type="file" id="image1" name="image" accept="image/*" class="upload-button" data-frame-id="1" data-frame-target="frame.input" data-preview-target="frame.preview">
+            <img id="image-preview-1" src="#" alt="Preview Image 1" style="display:none" data-frame-target="frame.preview">
+          </div>
+        </div>
+        <div class="frame-container">
+          <div class="photo">
+            <input type="file" id="image2" name="image" accept="image/*" class="upload-button" data-frame-id="2" data-frame-target="frame.input" data-preview-target="frame.preview">
+            <img id="image-preview-2" src="#" alt="Preview Image 2" style="display:none" data-frame-target="frame.preview">
+          </div>
+        </div>
+        <div class="frame-container">
+          <div class="photo">
+            <input type="file" id="image3" name="image" accept="image/*" class="upload-button" data-frame-id="3" data-frame-target="frame.input" data-preview-target="frame.preview">
+            <img id="image-preview-3" src="#" alt="Preview Image 3" style="display:none" data-frame-target="frame.preview">
+          </div>
+        </div>
+        <div class="frame-container">
+          <div class="photo">
+            <input type="file" id="image4" name="image" accept="image/*" class="upload-button" data-frame-id="4" data-frame-target="frame.input" data-preview-target="frame.preview">
+            <img class="thumbnail" id="image-preview-4" src="#" alt="Preview Image 4" style="display:none" data-frame-target="frame.preview">
           </div>
         </div>
       </div>

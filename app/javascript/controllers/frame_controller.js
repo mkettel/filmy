@@ -1,21 +1,25 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="frame"
 export default class extends Controller {
+  static targets = ["input", "preview"];
+
   connect() {
-    const imageInput = document.getElementById('image');
-    const imagePreview = document.getElementById('image-preview');
+    this.inputTargets.forEach((input) => {
+      input.addEventListener("change", () => {
+        const id = input.dataset.frameId;
+        const img = this.previewTarget.find(`#image-preview-${id}`)[0];
 
-    imageInput.addEventListener('change', function() {
-      const file = this.files[0];
-      const reader = new FileReader();
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
 
-      reader.addEventListener('load', function() {
-        imagePreview.src = reader.result;
-        imagePreview.style.display = 'block';
+          reader.onload = function(e) {
+            img.src = e.target.result;
+            img.style.display = "block";
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
       });
-
-      reader.readAsDataURL(file);
     });
   }
 }
