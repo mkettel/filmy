@@ -126,11 +126,26 @@
 
     }
   }
-  .thumbnail {
-    max-width: 400px;
-    max-height: 400px;
-    display: block;
-    padding: 10px;
+  // allows the preview of the image to show up
+  output{
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    border-radius: 5px;
   }
-
+  .image {
+    width: 100px;
+    height: 100px;
+    display: block;
+  } img {
+    height: auto;
+    width: 300px;
+  } span {
+    color: white;
+    cursor: pointer;
+  }
 }

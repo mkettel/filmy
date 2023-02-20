@@ -1,25 +1,32 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["input", "preview"];
 
   connect() {
-    this.inputTargets.forEach((input) => {
-      input.addEventListener("change", () => {
-        const id = input.dataset.frameId;
-        const img = this.previewTarget.find(`#image-preview-${id}`)[0];
+    const input = document.querySelector("input");
+    const output = document.querySelector("output");
+    let imgArray = []
 
-        if (input.files && input.files[0]) {
-          const reader = new FileReader();
+    input.addEventListener("change", function() {
+      const file = input.files
+      imgArray.push(file[0])
+      displayImages()
+    })
 
-          reader.onload = function(e) {
-            img.src = e.target.result;
-            img.style.display = "block";
-          };
+    function displayImages() {
+      let images = ""
+      imgArray.forEach((image, index) => {
+        images += `<div class="image">
+        <img src="${URL.createObjectURL(image)}" alt="image">
+        <span onClick="deleteImage(${index})">&times;</span>
+        </div>`
+      })
+      output.innerHTML = images
+    }
 
-          reader.readAsDataURL(input.files[0]);
-        }
-      });
-    });
+    function deleteImage(index) {
+      imgArray.splice(index, 1)
+      displayImages()
+    }
   }
 }
