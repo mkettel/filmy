@@ -6,6 +6,7 @@ class RollsController < ApplicationController
     @user = current_user
     @rolls = Roll.all
     @users_rolls = current_user.rolls  # this would be all of the cameras rolls
+    # @photos = Photo.all
   end
 
   def new

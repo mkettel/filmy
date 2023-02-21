@@ -1,7 +1,15 @@
 class PhotosController < ApplicationController
 
   #This should allow for the settings and details for the photo to be saved to the roll.
+
+  # Could be used to display all of the photos. Almost want to a live form that can be updated as needed
+  def index
+    @camera = Camera.find(params[:camera_id]) # gets the camera with the id needed
+    @user = current_user # sets the current user
+  end
+
   def create
+    @user = current_user
     @photo = Photo.new(photo_params)
     @roll = Roll.find(params[:roll_id])
     @camera = Camera.find(params[:camera_id])

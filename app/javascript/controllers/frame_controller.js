@@ -15,7 +15,6 @@ export default class extends Controller {
       });
     });
     // for each file that is added to the array, it goes through and creates a litle URL for the image and adds the HTML to the images variable
-    // No URL at the moment because that breaks it
     function displayImages(i) {
       let images = ""
       imgArray[i].forEach((image, index) => {
@@ -33,3 +32,6 @@ export default class extends Controller {
     }
   }
 }
+
+
+// <img src="${URL.createObjectURL(image)}" alt="image">
