@@ -5,21 +5,16 @@
 <div class="main-roll-container">
   <div class="photo-row-container">
     <h3>Film Type: <%=  @roll.roll_type.upcase %></h3>
-    <form action="<%= camera_roll_photos_path(@camera, @roll) %>" method="post">
-      <div class="frame-grid-container" data-controller="frame">
-        <div class="frame-container">
-          <div class="photo">
-            <input type="file" accept="image/jpeg, image/png, image/jpg">
-            <output></output>
-          </div>
-        </div>
-        <div class="frame-container">
-          <div class="photo">
-            <input type="file" accept="image/jpeg, image/png, image/jpg">
-            <output></output>
-          </div>
-        </div>
+    <div class="frame-grid-template">
+      <div class="frame">
+        <p>1</p>
       </div>
-    </form>
+      <div class="frame">
+        <p>2</p>
+      </div>
+      <div class="frame">
+        <p>3</p>
+      </div>
+    </div>
   </div>
 </div>

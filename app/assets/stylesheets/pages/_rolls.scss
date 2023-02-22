@@ -104,49 +104,9 @@
   p {
     color: $magic-mint;
   }
-  .frame-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .frame-container {
-    padding: 10px;
-    // border: 2px solid $magic-mint;
-    // border-bottom: 1px solid $magic-mint;
-    margin: 20px 0px;
-    display: flex;
-  }
-  .photo {
-    display: flex;
-    flex-direction: column-reverse;
-    // align-items: center;
-    // border-right: 1px solid $magic-mint;
-    .upload-button {
-      color: $magic-mint;
-
-    }
-  }
-  // allows the preview of the image to show up
-  output{
-    width: 100%;
-    min-height: 150px;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 15px;
-    position: relative;
-    border-radius: 5px;
-  }
-  .image {
-    width: 100px;
-    height: 100px;
-    display: block;
-  } img {
-    height: auto;
-    width: 300px;
-  } span {
-    color: white;
-    cursor: pointer;
-    // size: 10px;
-  }
+}
+.frame-grid-template {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
