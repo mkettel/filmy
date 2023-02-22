@@ -1,0 +1,19 @@
+
+<div class="frame-addition-container">
+  <h3>Add Frame</h3>
+  <div class="frame-form">
+  </div>
+</div>
+
+<%= form_with model: [ @camera, @roll, @frame ], url: camera_roll_frames_path(@camera, @roll), local: true do |form| %>
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.label :aperture %>
+  <%= form.number_field :aperture %>
+
+  <%= form.label :shutter_speed %>
+  <%= form.number_field :shutter_speed %>
+
+  <%= form.submit %>
+<% end %>

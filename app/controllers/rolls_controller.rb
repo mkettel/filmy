@@ -31,11 +31,27 @@ class RollsController < ApplicationController
     @user = current_user # assigns the current user
     @roll = Roll.find(params[:id])
     @roll.camera_id = Camera.find(params[:camera_id]) # should find the roll that is clikced on (used for ajax request)
+    @frames = @roll.frames
     respond_to do |format|
       format.html
       format.js
     end
     render partial: 'roll'
+  end
+
+  def create_frame
+    @roll = Roll.find(params[:roll_id])
+    @frame = @roll.frames.build(frame_params)
+
+    respond_to do |format|
+      if @frame.save
+        format.html { redirect_to @roll, notice: 'Frame was successfully created.' }
+        format.json { render :show, status: :created, location: @roll }
+      else
+        format.html { render :show }
+        format.json { render json: @frame.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
 
@@ -45,8 +61,7 @@ class RollsController < ApplicationController
     params.require(:roll).permit(:name, :roll_type)
   end
 
+  def frame_params
+    params.require(:frame).permit(:description, :aperture, :shutter_speed)
+  end
 end
-
-# Psuedocode for how to add data to a roll
-# I added the uploaded files class to the schema so i will be able to use that to get access to the proper files and data needed for the rolls
-# I left off at a point where i have a frame_id that i think i need to add to the class of the roll perhaps? i need chatgpt to help lol

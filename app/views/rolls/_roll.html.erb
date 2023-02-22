@@ -7,7 +7,12 @@
     <h3>Film Type: <%=  @roll.roll_type.upcase %></h3>
     <div class="frame-grid-template">
       <div class="frame">
+        <p><%= link_to "frame add", new_camera_roll_frame_path(@camera, @roll) %></p>
         <p>1</p>
+        <% @frames.each do |frame| %>
+          <p><%= frame.description %></p>
+          <p><%= frame.aperture %></p>
+        <% end %>
       </div>
       <div class="frame">
         <p>2</p>
