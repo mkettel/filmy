@@ -24,16 +24,6 @@ class PhotosController < ApplicationController
     if @photo.save
       raise
     end
-    # if params[:frame_number].present?
-    #   @frame_number = params[:frame_number]
-    #   @shutter_speed = params[:shutter_speed]
-    #   @aperture = params[:aperture]
-    #   @description = params[:description]
-    #   @photo = @roll.photos.build(photo_params)
-    #   if @photo.save
-    #     raise
-    #   end
-    # end
   end
 
 

@@ -1,3 +1,13 @@
-<div class="account-container">
-  <h2>Account</h2>
+<div class="account-page-container">
+  <div class="title-container">
+    <h2>account</h2>
+  </div>
+  <div class="content-grid-container">
+    <div class="left-container">
+      <p>settings</p>
+      <p><%= link_to "log out", destroy_user_session_path, class: "link-button" %></p>
+    </div>
+    <div class="right-container">
+    </div>
+  </div>
 </div>

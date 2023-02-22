@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_16_030614) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_20_112930) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,18 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_030614) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "drawing"
     t.index ["user_id"], name: "index_cameras_on_user_id"
-  end
-
-  create_table "photos", force: :cascade do |t|
-    t.integer "roll_id"
-    t.integer "frame_number"
-    t.string "shutter_speed"
-    t.string "aperture"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "rolls", force: :cascade do |t|
@@ -69,17 +58,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_030614) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["camera_id"], name: "index_rolls_on_camera_id"
-  end
-
-  create_table "uploaded_files", force: :cascade do |t|
-    t.bigint "roll_id", null: false
-    t.string "filename"
-    t.string "content_type"
-    t.integer "size"
-    t.string "file"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["roll_id"], name: "index_uploaded_files_on_roll_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -101,5 +79,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_16_030614) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "cameras", "users"
   add_foreign_key "rolls", "cameras"
-  add_foreign_key "uploaded_files", "rolls"
 end
