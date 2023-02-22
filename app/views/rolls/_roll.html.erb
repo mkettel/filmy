@@ -6,20 +6,17 @@
   <div class="photo-row-container">
     <h3>Film Type: <%=  @roll.roll_type.upcase %></h3>
     <div class="frame-grid-template">
-      <div class="frame">
-        <p><%= link_to "frame add", new_camera_roll_frame_path(@camera, @roll) %></p>
-        <p>1</p>
-        <% @frames.each do |frame| %>
-          <p><%= frame.description %></p>
-          <p><%= frame.aperture %></p>
+      <% @frames.each_with_index do |frame, index| %>
+          <div class="frame">
+            <p><%= link_to "frame add", new_camera_roll_frame_path(@camera, @roll) %></p>
+            <p><%= index + 1 %></p>
+            <p><%= frame.description %></p>
+            <p><%= frame.aperture %></p>
+          </div>
         <% end %>
-      </div>
-      <div class="frame">
-        <p>2</p>
-      </div>
-      <div class="frame">
-        <p>3</p>
-      </div>
+        <div class="new-frame">
+          <p><%= link_to "frame add", new_camera_roll_frame_path(@camera, @roll) %></p>
+        </div>
     </div>
   </div>
 </div>
