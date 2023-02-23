@@ -1,19 +1,24 @@
 
-<div class="frame-addition-container">
-  <h3>Add Frame</h3>
-  <div class="frame-form">
-  </div>
+
+
+<div class="back">
+  <%= link_to "BACK TO ROLLS", camera_rolls_path, class: "back-button" %>
 </div>
 
-<%= form_with model: [ @camera, @roll, @frame ], url: camera_roll_frames_path(@camera, @roll), local: true do |form| %>
-  <%= form.label :description %>
-  <%= form.text_area :description %>
+<div class="frame-addition-container">
+  <div class="title">
+    <h3>Add Frame</h3>
+  </div>
+    <div class="frame-form">
+      <%= simple_form_for [@camera, @roll, @frame], url: camera_roll_frames_path(@camera, @roll), method: :post do |form| %>
 
-  <%= form.label :aperture %>
-  <%= form.number_field :aperture %>
+      <%= form.input :photo, as: :file, label: "Photo", input_html: { class: "form-field" } %>
 
-  <%= form.label :shutter_speed %>
-  <%= form.number_field :shutter_speed %>
+      <%= form.input :description, label: "Description", input_html: { class: "form-field" } %>
+      <%= form.input :aperture, label: "Aperture", input_html: { class: "form-field" } %>
+      <%= form.input :shutter_speed, label: "Shutter Speed", input_html: { class: "form-field" } %>
 
-  <%= form.submit %>
-<% end %>
+      <%= form.button :submit, "CREATE" %>
+      <% end %>
+  </div>
+</div>

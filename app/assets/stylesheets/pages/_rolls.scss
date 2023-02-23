@@ -13,7 +13,7 @@
   // box-shadow: inset 0px -10px 0px black;
   h1 {
     color: $magic-mint;
-    font-weight: 350;
+    font-weight: 400;
     font-size: 64px;
   }
 }
@@ -98,11 +98,11 @@
 .main-roll-container {
   margin-top: 5%;
   h3 {
+    text-align: center;
+    font-size: 42px;
     margin-bottom: 40px;
-    color: $magic-mint;
-  }
-  p {
-    color: $magic-mint;
+    color: $blue-green;
+    font-weight: 250;
   }
 }
 .frame-grid-template {
@@ -110,13 +110,59 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
+  margin-bottom: 25px;
 }
 .frame {
-  border: 1px solid $magic-mint;
+  position: relative;
+  // border-right: 1px solid $magic-mint;
+  border-bottom: 1px solid $magic-mint;
+  margin-bottom: 5px;
 } p {
   margin-left: 10px;
 }
 .new-frame {
   border: 1px solid $magic-mint;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .frame-button {
+    color: $blue-green;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 22px;
+    &:hover {
+      color: $magic-mint;
+      transition: .3s;
+    }
+  }
+}
+// index number
+.index-num {
+  color: $magic-mint;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  text-shadow: 2px 2px 2px $blue-green;
+}
+// Image thumnail
+.frame-image {
+  height: auto;
+  width: 450px;
+  margin-bottom: 10px;
+}
+// details area on photo
+.image-detail-container {
+  .details-container {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    p {
+      color: $blue-green;
+    }
+  }
+}
+// description
+.description {
+  margin-top: 5px;
+  color: $blue-green;
 }

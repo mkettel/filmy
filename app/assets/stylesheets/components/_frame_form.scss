@@ -1,0 +1,37 @@
+.frame-addition-container {
+  margin-top: 100px;
+  margin: 0 auto;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .frame-form {
+    display: flex;
+    flex-direction: column;
+    color: $magic-mint;
+    .form-field {
+      display: flex;
+      margin-top: 20px;
+
+    }
+    .input {
+      width: 300px;
+      background-color: transparent;
+      border: 1px solid $magic-mint;
+      &:focus {
+        background-color: $blue-green;
+        color: $background;
+      }
+    }
+    .submit-button {
+      border-radius: 5px;
+    }
+  }
+}

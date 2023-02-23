@@ -4,18 +4,29 @@
 <%# This is what the roll of film looks like and will have the ability to upload images and settings for the camera %>
 <div class="main-roll-container">
   <div class="photo-row-container">
-    <h3>Film Type: <%=  @roll.roll_type.upcase %></h3>
+    <h3>FILM: <%=  @roll.roll_type.upcase %></h3>
     <div class="frame-grid-template">
       <% @frames.each_with_index do |frame, index| %>
           <div class="frame">
-            <p><%= link_to "frame add", new_camera_roll_frame_path(@camera, @roll) %></p>
-            <p><%= index + 1 %></p>
-            <p><%= frame.description %></p>
-            <p><%= frame.aperture %></p>
+            <% if frame.photo.attached? %>
+              <%= image_tag(frame.photo, class: "frame-image") %>
+            <% end %>
+            <p class="index-num"><%= index + 1 %></p>
+            <div class="image-detail-container">
+              <div class="details-container">
+                <p class="shutter_speed">shutter speed:</p>
+                <p><%= frame.shutter_speed %></p>
+              </div>
+              <div class="details-container">
+                <p class="aperture">aperture:</p>
+                <p><%= frame.aperture %></p>
+              </div>
+              <p class="description"><%= frame.description %></p>
+            </div>
           </div>
         <% end %>
         <div class="new-frame">
-          <p><%= link_to "frame add", new_camera_roll_frame_path(@camera, @roll) %></p>
+          <p><%= link_to "add frame", new_camera_roll_frame_path(@camera, @roll), class: "frame-button" %></p>
         </div>
     </div>
   </div>

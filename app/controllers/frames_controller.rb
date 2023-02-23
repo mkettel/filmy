@@ -21,7 +21,7 @@ class FramesController < ApplicationController
   private
 
   def frame_params
-    params.require(:frame).permit(:description, :shutter_speed, :aperture)
+    params.require(:frame).permit(:description, :shutter_speed, :aperture, :photo)
   end
 
 end

@@ -62,6 +62,6 @@ class RollsController < ApplicationController
   end
 
   def frame_params
-    params.require(:frame).permit(:description, :aperture, :shutter_speed)
+    params.require(:frame).permit(:description, :aperture, :shutter_speed, :photo)
   end
 end
