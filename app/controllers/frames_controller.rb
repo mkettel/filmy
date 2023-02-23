@@ -14,7 +14,7 @@ class FramesController < ApplicationController
     @camera = Camera.find(params[:camera_id])
     @roll_id = @roll.id
     if @frame.save
-      redirect_to new_camera_roll_frame_path(@camera, @roll)
+      redirect_to camera_rolls_path(@camera, @roll)
     end
   end
 

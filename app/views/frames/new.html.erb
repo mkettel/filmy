@@ -7,16 +7,16 @@
 
 <div class="frame-addition-container">
   <div class="title">
-    <h3>Add Frame</h3>
+    <h3>ADD FRAME</h3>
   </div>
     <div class="frame-form">
       <%= simple_form_for [@camera, @roll, @frame], url: camera_roll_frames_path(@camera, @roll), method: :post do |form| %>
 
-      <%= form.input :photo, as: :file, label: "Photo", input_html: { class: "form-field" } %>
+      <%= form.input :photo, as: :file, label: "Photo", input_html: { class: "file-field" } %>
 
-      <%= form.input :description, label: "Description", input_html: { class: "form-field" } %>
-      <%= form.input :aperture, label: "Aperture", input_html: { class: "form-field" } %>
-      <%= form.input :shutter_speed, label: "Shutter Speed", input_html: { class: "form-field" } %>
+      <%= form.input :description, placeholder: "DESCRIPTION", input_html: { class: "form-field" } %>
+      <%= form.input :aperture, placeholder: "APERTURE", input_html: { class: "form-field" } %>
+      <%= form.input :shutter_speed, placeholder: "SHUTTER SPEED", input_html: { class: "form-field" } %>
 
       <%= form.button :submit, "CREATE" %>
       <% end %>

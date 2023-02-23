@@ -7,31 +7,44 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-
   h3 {
     text-align: center;
     margin-bottom: 30px;
+    color: $magic-mint;
+    font-weight: 350;
   }
   .frame-form {
     display: flex;
     flex-direction: column;
     color: $magic-mint;
-    .form-field {
-      display: flex;
-      margin-top: 20px;
-
-    }
-    .input {
-      width: 300px;
+    .file-field {
+      color: $magic-mint;
+      height: 50px;
       background-color: transparent;
-      border: 1px solid $magic-mint;
       &:focus {
         background-color: $blue-green;
         color: $background;
       }
     }
-    .submit-button {
-      border-radius: 5px;
+    .form-field {
+      color: $magic-mint;
+      height: 50px;
+      background-color: transparent;
+      &:focus {
+        background-color: $blue-green;
+        color: $background;
+      }
+    }
+    .btn {
+      transition: .3s;
+      padding-left: 0px;
+      margin-top: 10px;
+      color: $magic-mint;
+      font-size: 18px;
+      &:hover {
+        transition: .3s;
+        color: $blue-green;
+      }
     }
   }
 }
