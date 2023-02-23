@@ -5,15 +5,16 @@ Rails.application.routes.draw do
 
   # this route should allow the show action to be accessible
   # get '/rolls/:id', to: 'rolls#show'
-  get '/cameras/:camera_id/rolls/:id', to: 'rolls#show'
+  # get '/cameras/:camera_id/rolls/:id', to: 'rolls#show' # this was causing it to always route to rolls#show
   get '/account', to: 'pages#account'
+  get '/cameras/:camera_id/rolls/new', to: 'rolls#new'
 
   # this should make the upload image a POST to the roll database
   post '/upload_image/:frame_id', to: 'rolls#upload_image'
   # Defines the root path route ("/")
   # root "articles#index"
   resources :cameras do
-    resources :rolls, only: [:new, :create, :show, :index, :update] do
+    resources :rolls do
       resources :frames
     end
   end

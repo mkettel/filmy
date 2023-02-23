@@ -19,10 +19,10 @@
     <% @cameras_rolls.each do |roll| %>
         <p class="roll-item" id="roll-<%= roll.camera_id %>-<%= roll.id %>"><%= roll.name %></p>
     <% end %>
-    <%= link_to new_camera_roll_path, class: "roll-item" do %>
+    <%= link_to "+", new_camera_roll_path(@camera), class: "roll-item" %>
       <%# <div class="roll-item" id="new">+</div> %>
-      <p>+</p>
-    <% end %>
+      <%# <p>+</p> %>
+
   </div>
 </div>
 

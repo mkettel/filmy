@@ -11,11 +11,12 @@ class RollsController < ApplicationController
 
   def new
     @roll = Roll.new
+    @camera = Camera.find(params[:camera_id])
   end
 
   def create
     @camera = Camera.find(params[:camera_id]) #gets the camera with the id needed
-    @user = current_user  # sets the current user
+    @user = current_user # sets the current user
     @roll = Roll.new(roll_params) # creates a new roll with the proper parameters needed
     # @roll.user = current_user
     @roll.camera = Camera.find(params[:camera_id])
