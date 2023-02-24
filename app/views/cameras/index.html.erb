@@ -13,7 +13,10 @@
     <div class="selection-container" data-controller="camera">
       <div class="camera-list">
         <% @users_cameras.each do |camera| %>
-          <div class="camera-item" id="<%= camera.id %>"><%= camera.model %></div>
+          <div class="camera-item" id="<%= camera.id %>">
+            <%= camera.model %>
+            <a href="#" id="delete">delete</a>
+          </div>
         <% end %>
         <div class="camera-item" id="new"><%= link_to "+", new_camera_path %></div>
       </div>

@@ -84,7 +84,7 @@ body {
   // box-shadow: 4px 0px 0px 0px black, -4px 0px 0px 0px black;
   border-right: 2px solid $magic-mint;
   .camera-list {
-    height: 400px;
+    height: 550px;
     overflow: scroll;
     display: flex;
     flex-direction: column;
@@ -93,6 +93,7 @@ body {
     width: 100%;
   }
   .camera-item {
+    position: relative;
     // font-family: $satoshi;
     transition: .3s;
     color: $magic-mint;
@@ -112,7 +113,15 @@ body {
       color: $magic-mint;
       text-decoration: none;
     }
-
+    #delete {
+      font-size: 24px;
+      display: none;
+      transition: .3s;
+      &:hover {
+        color: red;
+        transition: .3s;
+      }
+    }
   }
   .camera-item.active {
     color: $background;
@@ -126,6 +135,15 @@ body {
     // box-shadow: inset -220px 0 5px 5px $background;
     a {
       color: $background;
+    }
+    #delete {
+      position: absolute;
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      bottom: 25px;
+      right: -10px;
+      transform: rotate(-90deg);
     }
   }
 }

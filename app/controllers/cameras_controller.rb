@@ -30,6 +30,10 @@ class CamerasController < ApplicationController
     end
   end
 
+  def delete
+
+  end
+
 
   private
 
