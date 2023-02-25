@@ -30,8 +30,11 @@ class CamerasController < ApplicationController
     end
   end
 
-  def delete
-
+  def destroy
+    @camera = Camera.find(params[:id])
+    @camera.destroy
+    flash[:notice] = "Your camera listing was successfully deleted"
+    redirect_to cameras_path
   end
 
 

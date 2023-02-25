@@ -15,7 +15,6 @@
         <% @users_cameras.each do |camera| %>
           <div class="camera-item" id="<%= camera.id %>">
             <%= camera.model %>
-            <a href="#" id="delete">delete</a>
           </div>
         <% end %>
         <div class="camera-item" id="new"><%= link_to "+", new_camera_path %></div>
@@ -25,4 +24,12 @@
       <p><%= link_to "GO TO FILM", "#", id:"filmButton" %></p>
     </div>
   </div>
+  <%# camera dial %>
+  <%# <div class="selection-dial-container">
+    <div class="dial-options">
+      <p>edit</p>
+      <p>go to film</p>
+      <p>delete</p>
+    </div>
+  </div> %>
 </section>
