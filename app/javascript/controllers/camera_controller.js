@@ -25,9 +25,10 @@ export default class extends Controller {
 
       // updates the url for the film button so it goes to the correct roll index page for the camera of choice
       filmButton.href = "cameras/" + cameraId + "/rolls";
-
-
     });
+
+    // another function to delete the camera
+
   }
 }
 

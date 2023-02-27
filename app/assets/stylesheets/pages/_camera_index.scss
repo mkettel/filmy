@@ -153,19 +153,10 @@ body {
 
 
 // ------ SELECTION DIAL CONTAINER -------
-// .selection-dial-container {
-//   margin: 0 auto;
-//   max-width: 500px;
-//   position: absolute;
-//   bottom: 100px;
-//   left: 40%;
-//   border-top: 2px solid $magic-mint;
-//   .dial-options {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     justify-items: center;
-//   }
-// }
+.selection-dial-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 
 // ------ NEW.HTML.ERB ----------
