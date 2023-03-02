@@ -6,7 +6,7 @@
   height: 100%;   // This 100% allows for the box to resize if needed
   display: flex;
   flex-direction: column;
-  background-color: $light-font;
+  // background-color: $light-font;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 25px;
@@ -15,14 +15,20 @@
 .title-form {
   display: flex;
   justify-content: center;
+  h2 {
+    font-size: 52px;
+  }
 }
+
 .form-input, .form-label, .form-check-label {
-  color: $background;
+  // color: $background;
+  color: $magic-mint;
 }
 .form-control {
-  background-color: #afafaf30;
+  background-color: transparent;
+  border-radius: 5px;
   &:active {
-    background-color: $turquioise-ig;
+    background-color: $blue-green;
   }
   &:focus {
     background-color: rgb(213, 210, 210);
@@ -32,6 +38,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  .form-button {
+    color: $magic-mint;
+    font-size: 24px;
+  }
 }
 // log-in option section
 .log-in {

@@ -6,9 +6,15 @@ class CamerasController < ApplicationController
     @user = current_user
     @users_cameras = current_user.cameras
     # @camera_id = Camera.id
-    @selected_camera = params[:selected_camera] || @users_cameras.first.id
+    if @users_cameras.empty?
+      flash.now[:notice] = "You have no cameras yet."
+    else
+      @selected_camera = params[:selected_camera] || @users_cameras.first.id
+      @rolls_index_page_url = url_for(controller: "rolls", action: "index", camera_id: @selected_camera)
+    end
+    # @selected_camera = params[:selected_camera] || @users_cameras.first.id
 
-    @rolls_index_page_url = url_for(controller: "rolls", action: "index", camera_id: @selected_camera)
+
   end
 
   def show
