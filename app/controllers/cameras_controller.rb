@@ -13,8 +13,6 @@ class CamerasController < ApplicationController
       @rolls_index_page_url = url_for(controller: "rolls", action: "index", camera_id: @selected_camera)
     end
     # @selected_camera = params[:selected_camera] || @users_cameras.first.id
-
-
   end
 
   def show

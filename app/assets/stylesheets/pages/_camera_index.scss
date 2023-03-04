@@ -52,6 +52,7 @@ body {
   color: $blue-green;
   margin-top: 30px;
   text-transform: uppercase;
+  border-bottom: 1px solid $blue-green;
   // display: inline-block;
   .word {
     display: inline-block;
@@ -70,11 +71,13 @@ body {
   position: relative;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.2fr;
+  grid-template-columns: 1.2fr 1.2fr 1.2fr;
   height: 80vh;
   padding-bottom: 50px;
   .camera-content {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     h1 {
@@ -94,6 +97,19 @@ body {
       font-weight: 350;
       text-decoration: none;
       color: $magic-mint;
+    }
+    #filmButton {
+      border-bottom: 1px solid $magic-mint;
+    }
+    .other-buttons {
+      display: flex;
+      position: absolute;
+      bottom: 180px;
+      #buttons {
+        font-size: 24px;
+        margin-top: 0px;
+        color: $blue-green;
+      }
     }
   }
 }
@@ -122,7 +138,7 @@ body {
     // font-family: $satoshi;
     transition: .3s;
     color: $magic-mint;
-    font-size: 48px;
+    font-size: 52px;
     text-align: center;
     font-weight: 300;
     width: 100%;
@@ -153,15 +169,6 @@ body {
     // box-shadow: inset -220px 0 5px 5px $background;
     a {
       color: $background;
-    }
-    #delete {
-      position: absolute;
-      display: block;
-      font-size: 16px;
-      font-weight: 400;
-      bottom: 25px;
-      right: -10px;
-      transform: rotate(-90deg);
     }
   }
 }
