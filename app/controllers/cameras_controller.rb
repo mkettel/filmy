@@ -1,5 +1,7 @@
 class CamerasController < ApplicationController
 
+  skip_before_action :verify_authenticity_token, only: [:destroy]
+
   # use this method to display all of the cameras.
   def index
     @cameras = Camera.all
@@ -35,7 +37,8 @@ class CamerasController < ApplicationController
   end
 
   def destroy
-    @camera = Camera.find(params[:id])
+    # @camera = Camera.find(params[:id])
+    @camera = Camera.find(params[:camera_id])
     @camera.destroy
     flash[:notice] = "Your camera listing was successfully deleted"
     redirect_to cameras_path

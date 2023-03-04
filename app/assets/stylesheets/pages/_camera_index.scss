@@ -105,7 +105,12 @@ body {
       display: flex;
       position: absolute;
       bottom: 180px;
-      #buttons {
+      #editButton {
+        font-size: 24px;
+        margin-top: 0px;
+        color: $blue-green;
+      }
+      #deleteButton {
         font-size: 24px;
         margin-top: 0px;
         color: $blue-green;
