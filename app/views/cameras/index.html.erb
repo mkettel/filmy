@@ -18,7 +18,7 @@
         <% @users_cameras.each do |camera| %>
           <div class="camera-item" id="<%= camera.id %>">
             <%= camera.model %>
-            <%= link_to "❌", camera_path(camera), data:{turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this camera?" } %>
+            <%= link_to "DELETE", camera_path(camera), data:{turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this camera?" }, class:"delete-button" %>
           </div>
         <% end %>
         <div class="camera-item" id="new"><%= link_to "+", new_camera_path %></div>
