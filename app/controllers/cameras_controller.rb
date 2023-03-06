@@ -37,8 +37,8 @@ class CamerasController < ApplicationController
   end
 
   def destroy
-    # @camera = Camera.find(params[:id])
-    @camera = Camera.find(params[:camera_id])
+    @camera = current_user.cameras.find_by_id(params[:id]) #it is important to be specific to the current user
+    flash[:notice] = "Are you sure you want to delete this camera?"
     @camera.destroy
     flash[:notice] = "Your camera listing was successfully deleted"
     redirect_to cameras_path
