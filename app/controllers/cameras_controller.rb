@@ -36,6 +36,18 @@ class CamerasController < ApplicationController
     end
   end
 
+  def edit
+    @camera = current_user.cameras.find_by_id(params[:id])
+  end
+
+  def update
+    @camera = current_user.cameras.find_by_id(params[:id])
+    if @camera.update(camera_params)
+      flash[:notice] = "your camera was updated"
+    end
+    redirect_to cameras_path
+  end
+
   def destroy
     @camera = current_user.cameras.find_by_id(params[:id]) #it is important to be specific to the current user
     if @camera

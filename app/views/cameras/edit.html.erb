@@ -1,0 +1,16 @@
+<%# back button %>
+<div class="back">
+  <%= link_to "BACK TO CAMERAS", cameras_path, class: "back-button" %>
+</div>
+<!-- Modal for adding a camera -->
+<div class="new-form">
+  <div class="form-content">
+    <h1>UPDATE CAMERA</h1>
+    <%= simple_form_for @camera do |f| %>
+      <%= f.input :model, placeholder: "Model", input_html: { class: "form-input" } %>
+      <%= f.input :year, as: :integer, placeholder: "Year", input_html: { class: "form-input" } %>
+      <%= f.button :submit, "UPDATE" %>
+      <%# <button id="new-camera-button">Close</button> %>
+    <% end %>
+  </div>
+</div>
