@@ -19,6 +19,7 @@
           <div class="camera-item" id="<%= camera.id %>">
             <%= camera.model %>
             <%= link_to "DELETE", camera_path(camera), data:{turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this camera?" }, class:"delete-button" %>
+            <%= link_to "EDIT", edit_camera_path(camera), class: "edit-button" %>
           </div>
         <% end %>
         <div class="camera-item" id="new"><%= link_to "+", new_camera_path %></div>
