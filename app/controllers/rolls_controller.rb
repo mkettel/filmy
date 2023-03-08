@@ -41,6 +41,20 @@ class RollsController < ApplicationController
     redirect_to camera_rolls_path
   end
 
+  def destroy
+    @camera = current_user.cameras.find_by_id(params[:id]) #it is important to be specific to the current user
+    @roll = Roll.find(params[:id])
+    if @roll
+      flash[:notice] = "Are you sure you want to delete this Roll?"
+      if @roll.destroy
+        flash[:notice] = "Your camera listing was successfully deleted"
+      else
+        flash[:notice] = "Failed to delete your camera"
+      end
+    end
+    redirect_to camera_rolls_path
+  end
+
   def show
     @camera = Camera.find(params[:camera_id]) # should find the correct camera
     @user = current_user # assigns the current user
