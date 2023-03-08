@@ -31,6 +31,7 @@
   // box-shadow: 0px 5px 0px 0px rgb(19, 19, 19), 0px -5px 0px 0px rgb(19, 19, 19);
   .roll-list {
     width: 100%;
+    // position: relative;
     align-items: center;
     justify-items: center;
     justify-content: space-around;
@@ -43,10 +44,10 @@
       text-decoration: none;
       color: $magic-mint;
     }
-
   }
   .roll-item {
     // width: 100%;
+    position: relative;
     font-size: 36px;
     color: $magic-mint;
     gap: 10px;
@@ -71,6 +72,14 @@
     p {
       margin: 0px;
     }
+    .delete-button-camera {
+      display: none;
+      font-size: 14px;
+    }
+    .edit-button-camera {
+      display: none;
+      font-size: 14px;
+    }
   }
 
   .roll-item.active {
@@ -85,6 +94,38 @@
     box-shadow: inset 0px 0px 2px 2px $background;
     a {
       color: $background;
+    }
+    .edit-button-camera {
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 16px;
+      transform: rotate(0deg);
+      padding: 0px 10px;
+      transition: .3s;
+
+      &:hover {
+        transition: .3s;
+        color: $magic-mint;
+        transform: scale(1.2);
+      }
+    }
+    .delete-button-camera {
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      font-size: 14px;
+      transform: rotate(0deg);
+      padding: 0px 10px;
+      transition: .3s;
+      &:hover {
+        transition: .3s;
+        color: $magic-mint;
+        transform: scale(1.2);
+
+      }
     }
   }
 }
