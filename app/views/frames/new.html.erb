@@ -9,7 +9,7 @@
   <div class="title">
     <h3>ADD FRAME</h3>
   </div>
-    <div class="frame-form">
+    <div class="frame-form" contenteditable="true">
       <%= simple_form_for [@camera, @roll, @frame], url: camera_roll_frames_path(@camera, @roll), method: :post do |form| %>
 
       <%= form.input :photo, as: :file, label: "Photo", input_html: { class: "file-field" } %>

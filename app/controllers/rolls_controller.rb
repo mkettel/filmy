@@ -5,6 +5,7 @@ class RollsController < ApplicationController
     @cameras_rolls = @camera.rolls # gets the rolls for that specific camera
     @user = current_user
     @rolls = Roll.all
+    # @roll = Roll.find(params[:id])
     @users_rolls = current_user.rolls  # this would be all of the cameras rolls
     # @photos = Photo.all
   end

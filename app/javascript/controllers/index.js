@@ -7,6 +7,9 @@ import { application } from "./application"
 import CameraController from "./camera_controller"
 application.register("camera", CameraController)
 
+import EditorController from "./editor_controller"
+application.register("editor", EditorController)
+
 import FilmController from "./film_controller"
 application.register("film", FilmController)
 

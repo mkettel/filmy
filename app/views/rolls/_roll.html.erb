@@ -3,27 +3,30 @@
 <%# GOES IN THE ROLLS INDEX.HTML PAGE AND HOLDS THE INDIVIDUAL ROLL INFORMATION %>
 <%# This is what the roll of film looks like and will have the ability to upload images and settings for the camera %>
 <div class="main-roll-container">
-  <div class="photo-row-container">
-    <h3>FILM: <%=  @roll.roll_type.upcase %></h3>
+  <div class="photo-row-container" data-controller="editor" data-roll-id="<%= @roll.id %>">
+    <h3>FILM: <%=  @roll.roll_type.upcase %> <%= @roll.id %></h3>
     <div class="frame-grid-template">
       <% @frames.each_with_index do |frame, index| %>
-          <div class="frame">
+          <div class="frame" id="<%= frame.id %>">
             <% if frame.photo.attached? %>
               <%= image_tag(frame.photo, class: "frame-image") %>
             <% end %>
             <p class="index-num"><%= index + 1 %></p>
             <div class="image-detail-container">
               <div class="details-container">
-                <p class="shutter_speed">shutter speed:</p>
+                <p class="shutter_speed" contenteditable="true">shutter speed:</p>
                 <p><%= frame.shutter_speed %></p>
               </div>
               <div class="details-container">
-                <p class="aperture">aperture:</p>
+                <p class="aperture" contenteditable="true">aperture:</p>
                 <p><%= frame.aperture %></p>
               </div>
-              <p class="description"><%= frame.description %></p>
+              <p class="description" contenteditable="true">
+                <%= frame.description %>
+              </p>
             </div>
           </div>
+          <button id="save-btn">Save Changes</button>
         <% end %>
         <div class="new-frame">
           <p><%= link_to "add frame", new_camera_roll_frame_path(@camera, @roll), class: "frame-button" %></p>

@@ -8,7 +8,6 @@ class FramesController < ApplicationController
   end
 
   def create
-
     @roll = Roll.find(params[:roll_id])
     @frame = @roll.frames.build(frame_params)
     @camera = Camera.find(params[:camera_id])
@@ -16,6 +15,24 @@ class FramesController < ApplicationController
     if @frame.save
       redirect_to camera_rolls_path(@camera, @roll)
     end
+  end
+
+  def edit
+    @camera = Camera.find(params[:camera_id])
+    @roll = Roll.find(params[:roll_id])
+    @frame = Frame.find(params[:id])
+  end
+
+  def update
+    # @camera = current_user.cameras.find_by_id(params[:id])
+    # @camera = Camera.find(params[:camera_id])
+    # @roll = current_user.cameras.rolls.find_by_id(params[:roll_id])
+    @frame = Frame.find(params[:id])
+    if @frame.update(frame_params)
+      flash[:notice] = "your frame was updated"
+    end
+    # redirect_to frameshit_path(@frame)
+
   end
 
   private
