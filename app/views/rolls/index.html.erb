@@ -18,6 +18,7 @@
   <div class="roll-list" data-controller="roll">
     <% @cameras_rolls.each do |roll| %>
         <p class="roll-item" id="roll-<%= roll.camera_id %>-<%= roll.id %>"><%= roll.name %></p>
+        <%= link_to "🛠", edit_camera_roll_path(@camera, roll), class: "edit-button-camera" %>
     <% end %>
     <%= link_to "+", new_camera_roll_path(@camera), class: "roll-item" %>
       <%# <div class="roll-item" id="new">+</div> %>

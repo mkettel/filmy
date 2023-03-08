@@ -27,6 +27,20 @@ class RollsController < ApplicationController
     end
   end
 
+  def edit
+    @camera = Camera.find(params[:camera_id])
+    @roll = Roll.find(params[:id])
+  end
+
+  def update
+    @camera = current_user.cameras.find_by_id(params[:id])
+    @roll = Roll.find(params[:id])
+    if @roll.update(roll_params)
+      flash[:notice] = "your film roll was updated"
+    end
+    redirect_to camera_rolls_path
+  end
+
   def show
     @camera = Camera.find(params[:camera_id]) # should find the correct camera
     @user = current_user # assigns the current user
