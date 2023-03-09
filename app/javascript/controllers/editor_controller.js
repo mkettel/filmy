@@ -1,5 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
+
+// UPDATES THE FIELDS IN THE FRAMES AJAX STYLE MFER
+
 // Connects to data-controller="editor"
 export default class extends Controller {
   connect() {
@@ -42,10 +45,22 @@ export default class extends Controller {
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.setRequestHeader("X-CSRF-Token", csrfToken); // Add CSRF token to header
 
+      // Show a toast notification
+      const toast = document.querySelector(".toast");
+      toast.classList.remove('hidden');
+      toast.classList.add('show');
+      // document.querySelector(".main-roll-container").appendChild(toast);
+
+      // Hide the toast after a short delay
+      setTimeout(function() {
+        toast.classList.add('hidden');
+      }, 2000);
+
       xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
           // handle success
-        }
+
+        };
       };
       const data = { frame: changes };
       xhr.send(JSON.stringify(data));

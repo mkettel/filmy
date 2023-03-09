@@ -25,12 +25,17 @@
                 <%= frame.description %>
               </p>
             </div>
+            <div class="save">
+              <button id="save-btn">Save Changes</button>
+            </div>
           </div>
-          <button id="save-btn">Save Changes</button>
         <% end %>
         <div class="new-frame">
           <p><%= link_to "add frame", new_camera_roll_frame_path(@camera, @roll), class: "frame-button" %></p>
         </div>
     </div>
+  </div>
+  <div class="toast" data-controller="editor">
+    <h3>SAVED</h3>
   </div>
 </div>
