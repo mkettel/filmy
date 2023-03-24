@@ -22,5 +22,8 @@ application.register("hello", HelloController)
 import LoaderController from "./loader_controller"
 application.register("loader", LoaderController)
 
+import RecentController from "./recent_controller"
+application.register("recent", RecentController)
+
 import RollController from "./roll_controller"
 application.register("roll", RollController)
