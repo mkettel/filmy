@@ -29,6 +29,7 @@ class FramesController < ApplicationController
     @camera = Camera.find(params[:camera_id]) # finds the camera that the roll is associated with
     @roll = Roll.find(params[:roll_id]) # finds the roll that the frame is being created for
     @frame = Frame.find(params[:id]) # finds the frame that is being edited
+    @frames = @roll.frames.order(:created_at) # finds all the frames for the roll
 
     if @frame.update(frame_params)
       flash[:notice] = "Your frame was updated."

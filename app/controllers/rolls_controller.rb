@@ -61,7 +61,8 @@ class RollsController < ApplicationController
     @user = current_user # assigns the current user
     @roll = Roll.find(params[:id])
     @roll.camera_id = Camera.find(params[:camera_id]) # should find the roll that is clikced on (used for ajax request)
-    @frames = @roll.frames
+    # @frames = @roll.frames
+    @frames = @roll.frames.order(:created_at)
     respond_to do |format|
       format.html
       format.js
