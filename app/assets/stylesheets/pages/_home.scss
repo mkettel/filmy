@@ -33,7 +33,7 @@
 .middle-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: flex-start;
   padding: 70px 0px 0px 60px;
   h1 {
@@ -48,6 +48,23 @@
     font-size: 18px;
     font-weight: 200;
   }
+  .button {
+    // position: absolute;
+    // top: 160px;
+    // left: 0px;/
+    opacity: 1;
+    transition: .4s;
+    a {
+      font-size: 32px;
+      font-weight: 400;
+      text-decoration: none;
+      color: $magic-mint;
+      &:hover {
+        color: $blue-green;
+        transition: .4s;
+      }
+    }
+  }
 
   // This is the section with fake image shutter and shit
   // the css before the hover element hide the get started button
@@ -56,21 +73,10 @@
     color: $magic-mint;
     display: grid;
     grid-template-columns: .5fr 1fr;
-    padding-bottom: 20%;
+    // padding-bottom: 20%;
     transition: .3s;
-    .button {
-      position: absolute;
-      top: 160px;
-      left: 0px;
-      opacity: 1;
-      transition: .4s;
-      a {
-        font-size: 32px;
-        font-weight: 400;
-        text-decoration: none;
-        color: $magic-mint;
-      }
-    }
+    margin: 150px 0px 10px 0px;
+
     .right-side {
       margin-left: 25px;
       transition: .3s;
@@ -87,24 +93,6 @@
       .right-side {
         opacity: .8s;
         transition: .3s;
-      }
-      .button {
-        transition: .4s;
-        display: block;
-        position: absolute;
-        top: 160px;
-        left: 0px;
-        opacity: 1;
-        z-index: 100;
-        font-size: 28px;
-        a {
-          transition: .4s;
-          color: $magic-mint;
-          text-decoration: none;
-          &:hover {
-            color: $blue-green;
-          }
-        }
       }
     }
   }
