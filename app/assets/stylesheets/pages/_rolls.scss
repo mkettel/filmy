@@ -186,6 +186,17 @@
   top: 10px;
   text-shadow: 2px 2px 2px $blue-green;
 }
+.delete-button-frame {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  font-size: 14px;
+  transform: rotate(0deg);
+  padding: 0px 10px;
+  transition: .3s;
+  text-decoration: none;
+}
 // Image thumnail
 .frame-image {
   height: auto;

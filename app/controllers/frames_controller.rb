@@ -59,6 +59,22 @@ class FramesController < ApplicationController
     end
   end
 
+  def destroy
+    @camera = current_user.cameras.find_by_id(params[:id]) #it is important to be specific to the current user
+    @roll = Roll.find(params[:roll_id]) # finds the roll that the frame is being created for
+    @frame = Frame.find(params[:id]) # finds the frame that is being edited
+    if @frame
+      flash[:notice] = "Are you sure you want to delete this Frame?"
+      if @frame.destroy
+        flash[:notice] = "Your Frame was successfully deleted"
+        redirect_to camera_rolls_path
+        # redirect_to frameshit_path(@frame)
+      else
+        flash[:notice] = "Failed to delete your Frame"
+      end
+    end
+  end
+
   private
 
   def frame_params
