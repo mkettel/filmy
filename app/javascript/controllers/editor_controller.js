@@ -13,31 +13,31 @@ export default class extends Controller {
         const rollId = document.querySelector(".photo-row-container").getAttribute("data-roll-id"); // get the roll id
         console.log(rollId);
 
-        const urlParts = window.location.pathname.split('/');
-        const cameraId = urlParts[2];
+        const urlParts = window.location.pathname.split('/'); // get the camera id
+        const cameraId = urlParts[2]; // camera_id is the 3rd segment in the URL
         console.log(cameraId);
 
-        const frame = saveBtn.closest('.frame');
-        const frameId = frame.id;
+        const frame = saveBtn.closest('.frame'); // get the frame
+        const frameId = frame.id; // get the frame id
         console.log(frameId);
 
-        const editableFields = frame.querySelectorAll("[contenteditable='true']");
-        const changes = {};
-        editableFields.forEach(function(field) {
-          const key = field.classList[0];
-          const value = field.innerText;
-          changes[key] = value;
+        const editableFields = frame.querySelectorAll("[contenteditable='true']"); // get all the editable fields
+        const changes = {}; // collect the changes made to each field
+        editableFields.forEach(function(field) { // loop through each editable field
+          const key = field.classList[0]; // get the class name
+          const value = field.innerText; // get the inner text
+          changes[key] = value; // add the key and value to the changes object
         });
 
-        const xhr = new XMLHttpRequest();
-        const url = `/cameras/${cameraId}/rolls/${rollId}/frames/${frameId}`
-        xhr.open("PATCH", url, true);
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.setRequestHeader("X-CSRF-Token", csrfToken);
+        const xhr = new XMLHttpRequest(); // send the changes to the server
+        const url = `/cameras/${cameraId}/rolls/${rollId}/frames/${frameId}` // build the url to send the changes to
+        xhr.open("PATCH", url, true); // open the request
+        xhr.setRequestHeader("Content-Type", "application/json");   // set the content type
+        xhr.setRequestHeader("X-CSRF-Token", csrfToken); // Add CSRF token to header
 
-        const toast = document.querySelector(".toast");
-        toast.classList.remove('hidden');
-        toast.classList.add('show');
+        const toast = document.querySelector(".toast");  // show a toast notification
+        toast.classList.remove('hidden');  // remove the hidden class
+        toast.classList.add('show');  // add the show class
 
         setTimeout(function() {
           toast.classList.add('hidden');

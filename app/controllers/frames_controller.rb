@@ -49,10 +49,10 @@ class FramesController < ApplicationController
         @frame.update_attribute(:aperture, frame_params[:aperture])
       end
 
-      if @frame.photo_changed?
-        # Do something if the photo field was changed
-        @frame.update_attribute(:photo, frame_params[:photo])
-      end
+      # if @frame.photo_changed?
+      #   # Do something if the photo field was changed
+      #   @frame.update_attribute(:photo, frame_params[:photo])
+      # end
 
       redirect_to frameshit_path(@frame) # redirect to the frame show page
     end
