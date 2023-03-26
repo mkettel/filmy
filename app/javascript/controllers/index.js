@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import BurgController from "./burg_controller"
+application.register("burg", BurgController)
+
 import CameraController from "./camera_controller"
 application.register("camera", CameraController)
 

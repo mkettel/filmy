@@ -140,9 +140,11 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* CSS styles go here */
-  .burg-menu {
-    display: block;
-  }
+  // hamburger menu option
+
+
+
+  // This is the container for the entire homepage
   .home-container {
     display: flex;
     flex-direction: column;
