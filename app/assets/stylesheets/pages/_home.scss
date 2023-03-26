@@ -5,6 +5,9 @@
   background-color: $background;
   height: 100vh;
 }
+.burg-menu {
+  display: none;
+}
 // This is laid out to create the separate columns for the different sections
 .home-container {
   display: grid;
@@ -137,6 +140,9 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* CSS styles go here */
+  .burg-menu {
+    display: block;
+  }
   .home-container {
     display: flex;
     flex-direction: column;
@@ -185,6 +191,9 @@
           margin: 0px;
         }
       }
+    }
+    .right-content {
+      display: none;
     }
   }
 }
