@@ -31,6 +31,7 @@
 }
 // Container with the title and sample content
 .middle-content {
+  position: relative;;
   display: flex;
   flex-direction: column;
   // justify-content: space-between;
@@ -170,6 +171,11 @@
             margin-left: 0px;
           }
         }
+      }
+      .button {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
       }
     }
   }
