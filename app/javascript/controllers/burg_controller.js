@@ -4,12 +4,12 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
 
-  const menuToggle = document.querySelector(".burg-menu");
+  const menuToggle = document.querySelector(".hamburger-menu");
   const menu = document.querySelector(".menu");
 
     menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("menu-open");
-    menu.classList.toggle("menu-open");
+      menuToggle.classList.toggle("burger-open");
+      menu.classList.toggle("menu-open");
     });
   }
 }

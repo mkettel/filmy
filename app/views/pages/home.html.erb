@@ -1,6 +1,20 @@
 <%# Landing Page %>
 
 <section class="home" data-controller="burg">
+  <button class="hamburger-menu" aria-label="Menu">
+    <span class="hamburger-icon"></span>
+  </button>
+  <% if user_signed_in? %>
+  <ul class="menu">
+    <li><%= link_to "account", account_path, class: "navbar-c" %></li>
+    <li><%= link_to "gallery", root_path, class: "navbar-c" %></li>
+    <li><%= link_to "learn", root_path, class: "navbar-c" %></li>
+  </ul>
+  <% else %>
+  <ul class="menu">
+    <li><%= link_to "sign up", new_user_registration_path, class: "navbar-c" %></li>
+  </ul>
+  <% end %>
   <div class="home-container">
     <div class="left-content">
       <div class="img"></div>

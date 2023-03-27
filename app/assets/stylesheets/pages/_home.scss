@@ -5,9 +5,7 @@
   background-color: $background;
   height: 100vh;
 }
-.burg-menu {
-  display: none;
-}
+
 // This is laid out to create the separate columns for the different sections
 .home-container {
   display: grid;
@@ -124,7 +122,14 @@
     transition: .3s all;
   }
 }
+.hamburger-menu {
+  display: none;
+}
+// Burger Menu ---------------------------------------------
 
+
+
+// ------------------------
 // fade effect for the image on the homepage
 @keyframes fadeIn {
   from {
@@ -141,6 +146,85 @@
 @media only screen and (max-width: 600px) {
   /* CSS styles go here */
   // hamburger menu option
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  // creates the initial lines for the icon
+  .hamburger-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in-out;
+  }
+  // creates the animation for the icon and other two lines
+  .hamburger-icon:before,
+  .hamburger-icon:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .hamburger-icon:before {
+    transform: rotate(45deg);
+  }
+
+  .hamburger-icon:after {
+    transform: rotate(-45deg);
+  }
+  // this is the menu that pops up when the hamburger icon is clicked
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9998;
+  }
+  // this is the list of items in the menu
+  .menu li {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  // this is the last item in the menu so that it doesn't have a border
+  .menu li:last-child {
+    border-bottom: none;
+  }
+  // this is the text in the menu (maybe change since link_to)
+  .menu li a {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .burger-open {
+    display: block;
+    background-color: transparent;
+  }
+  .menu-open {
+    display: block;
+    background-color: black;
+  }
 
 
 
