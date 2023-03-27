@@ -152,7 +152,7 @@
   .hamburger-menu {
     display: block;
     position: absolute;
-    top: 5;
+    top: 5px;
     right: 0;
     z-index: 999;
     background-color: transparent;
@@ -164,7 +164,7 @@
   // creates the initial lines for the icon
   .hamburger-icon {
     display: block;
-    width: 20px;
+    width: 25px;
     height: 2px;
     background-color: #000;
     position: relative;
@@ -185,13 +185,13 @@
 
   .hamburger-icon::before {
     transform: rotate(0deg);
-    top: -5px;
+    top: -7px;
     transition: .3s all;
   }
 
   .hamburger-icon::after {
     transform: rotate(0deg);
-    top: 5px;
+    top: 7px;
     transition: .3s all;
   }
   // this is the menu that pops up when the hamburger icon is clicked
@@ -250,7 +250,6 @@
     display: block;
     background-color: $background;
     transition: opacity .3s ease-in-out;
-
   }
 
 
@@ -262,6 +261,7 @@
     padding: 0px 20px 0px 20px;
     gap: 0px;
     .left-content {
+      margin-top: 15px;
       min-height: 360px;
       border-right: none;
       justify-content: center;
