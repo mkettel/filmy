@@ -122,10 +122,13 @@
     transition: .3s all;
   }
 }
+// Burger Menu ---------------------------------------------
 .hamburger-menu {
   display: none;
 }
-// Burger Menu ---------------------------------------------
+.menu {
+  display: none;
+}
 
 
 
@@ -156,6 +159,7 @@
     border: none;
     cursor: pointer;
     padding: 10px;
+
   }
   // creates the initial lines for the icon
   .hamburger-icon {
@@ -165,7 +169,8 @@
     background-color: #000;
     position: relative;
     transform: rotate(0deg);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
   }
   // creates the animation for the icon and other two lines
   .hamburger-icon:before,
@@ -176,22 +181,24 @@
     height: 100%;
     background-color: #000;
     position: absolute;
-    top: 0;
-    left: 0;
   }
 
-  .hamburger-icon:before {
-    transform: rotate(45deg);
+  .hamburger-icon::before {
+    transform: rotate(0deg);
+    top: -5px;
+    transition: .3s all;
   }
 
-  .hamburger-icon:after {
-    transform: rotate(-45deg);
+  .hamburger-icon::after {
+    transform: rotate(0deg);
+    top: 5px;
+    transition: .3s all;
   }
   // this is the menu that pops up when the hamburger icon is clicked
   .menu {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 20px;
     right: 0;
     width: 100%;
     background-color: #fff;
@@ -220,6 +227,17 @@
   .burger-open {
     display: block;
     background-color: transparent;
+    transition: all .3s ease-in-out;
+    .hamburger-icon::after {
+      transform: rotate(45deg);
+      top: 0px;
+      transition: .3s;
+    }
+    .hamburger-icon::before {
+      transform: rotate(-45deg);
+      top: 0px;
+      transition: .3s;
+    }
   }
   .menu-open {
     display: block;
