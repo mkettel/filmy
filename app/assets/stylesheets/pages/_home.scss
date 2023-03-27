@@ -196,6 +196,7 @@
   }
   // this is the menu that pops up when the hamburger icon is clicked
   .menu {
+    // opacity: 0;
     display: none;
     position: absolute;
     top: 0px;
@@ -204,16 +205,17 @@
     height: 100%;
     background-color: $background;
     z-index: 900;
+    transition: .3s;
   }
   .ham-container {
-    margin-top: 25px;
+    margin-top: 50px;
   }
   // this is the list of items in the menu
   .menu li {
     display: block;
     margin-top: 0px;
     padding: 10px;
-    text-align: end;
+    text-align: center;
     // border-bottom: 1px solid #ccc;
   }
   // this is the last item in the menu so that it doesn't have a border
@@ -224,7 +226,7 @@
   .menu li a {
     display: block;
     color: $magic-mint;
-    font-size: 14px;
+    font-size: 26px;
     font-weight: 300;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -247,7 +249,8 @@
   .menu-open {
     display: block;
     background-color: $background;
-    transition: .4s;
+    transition: opacity .3s ease-in-out;
+
   }
 
 
