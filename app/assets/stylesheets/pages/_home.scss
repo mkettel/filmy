@@ -152,7 +152,7 @@
   .hamburger-menu {
     display: block;
     position: absolute;
-    top: 0;
+    top: 5;
     right: 0;
     z-index: 999;
     background-color: transparent;
@@ -170,7 +170,6 @@
     position: relative;
     transform: rotate(0deg);
     transition: all 0.3s ease-in-out;
-
   }
   // creates the animation for the icon and other two lines
   .hamburger-icon:before,
@@ -181,6 +180,7 @@
     height: 100%;
     background-color: #000;
     position: absolute;
+    z-index: 999;
   }
 
   .hamburger-icon::before {
@@ -198,18 +198,23 @@
   .menu {
     display: none;
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 0;
     width: 100%;
-    background-color: #fff;
-    z-index: 9998;
+    height: 100%;
+    background-color: $background;
+    z-index: 900;
+  }
+  .ham-container {
+    margin-top: 25px;
   }
   // this is the list of items in the menu
   .menu li {
     display: block;
-    margin: 0;
+    margin-top: 0px;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    text-align: end;
+    // border-bottom: 1px solid #ccc;
   }
   // this is the last item in the menu so that it doesn't have a border
   .menu li:last-child {
@@ -218,15 +223,15 @@
   // this is the text in the menu (maybe change since link_to)
   .menu li a {
     display: block;
-    color: #333;
+    color: $magic-mint;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 300;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
   }
   .burger-open {
     display: block;
-    background-color: transparent;
+    background-color: $background;
     transition: all .3s ease-in-out;
     .hamburger-icon::after {
       transform: rotate(45deg);
@@ -241,7 +246,8 @@
   }
   .menu-open {
     display: block;
-    background-color: black;
+    background-color: $background;
+    transition: .4s;
   }
 
 
