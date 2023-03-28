@@ -312,8 +312,170 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
   /* CSS styles go here */
+  /* CSS styles go here */
+  // hamburger menu option
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+
+  }
+  // creates the initial lines for the icon
+  .hamburger-icon {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    position: relative;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+  }
+  // creates the animation for the icon and other two lines
+  .hamburger-icon:before,
+  .hamburger-icon:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    z-index: 999;
+  }
+
+  .hamburger-icon::before {
+    transform: rotate(0deg);
+    top: -7px;
+    transition: .3s all;
+  }
+
+  .hamburger-icon::after {
+    transform: rotate(0deg);
+    top: 7px;
+    transition: .3s all;
+  }
+  // this is the menu that pops up when the hamburger icon is clicked
+  .menu {
+    // opacity: 0;
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    z-index: 900;
+    transition: .3s;
+  }
+  .ham-container {
+    margin-top: 50px;
+  }
+  // this is the list of items in the menu
+  .menu li {
+    display: block;
+    margin-top: 0px;
+    padding: 10px;
+    text-align: center;
+    // border-bottom: 1px solid #ccc;
+  }
+  // this is the last item in the menu so that it doesn't have a border
+  .menu li:last-child {
+    border-bottom: none;
+  }
+  // this is the text in the menu (maybe change since link_to)
+  .menu li a {
+    display: block;
+    color: $magic-mint;
+    font-size: 26px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  .burger-open {
+    display: block;
+    background-color: $background;
+    transition: all .3s ease-in-out;
+    .hamburger-icon::after {
+      transform: rotate(45deg);
+      top: 0px;
+      transition: .3s;
+    }
+    .hamburger-icon::before {
+      transform: rotate(-45deg);
+      top: 0px;
+      transition: .3s;
+    }
+  }
+  .menu-open {
+    display: block;
+    background-color: $background;
+    transition: opacity .3s ease-in-out;
+  }
+
+
+
+  // This is the container for the entire homepage
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    gap: 0px;
+    .left-content {
+      margin-top: 15px;
+      min-height: 360px;
+      border-right: none;
+      justify-content: center;
+      .img {
+        height: 90%;
+        width: 90%;
+      }
+    }
+    .middle-content {
+      padding: 0px;
+      .header-content {
+
+        h1 {
+          font-size: 80px;
+          margin: 0px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+      }
+      .example-content {
+        display: none;
+        border-top: 2px solid $magic-mint;
+        margin-top: 20px;
+        padding-top: 20px;
+        margin-bottom: 0px;
+        .left-side {
+          .ex-field {
+            font-size: 16px;
+            margin-left: 0px;
+          }
+        }
+      }
+      .button {
+        width: 100%;
+        border-top: 1px solid $magic-mint;
+        margin-top: 20px;
+        padding-top: 20px;
+        p {
+          margin: 0px;
+        }
+      }
+    }
+    .right-content {
+      display: none;
+    }
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
