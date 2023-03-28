@@ -312,7 +312,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 600px) and (max-width: 900px) {
   /* CSS styles go here */
   /* CSS styles go here */
   // hamburger menu option
@@ -479,8 +479,11 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
   /* CSS styles go here */
+  .home-container {
+    padding: 40px 20px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
