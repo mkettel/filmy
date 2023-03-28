@@ -292,8 +292,12 @@ body {
   .camera-container {
     display: flex;
     flex-direction: column;
+    padding: 5px 5px;
     .camera-content {
       padding: 20px;
+      margin: 5px 0px;
+      background-color: rgb(27, 27, 27);
+      box-shadow: inset 4px 5px 4px 1px rgb(10, 10, 10), inset 1px -1px 5px 3px rgb(10, 10, 10);
     }
     .selection-container {
       border-left: none;
