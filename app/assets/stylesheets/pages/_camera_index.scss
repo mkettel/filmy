@@ -275,3 +275,48 @@ body {
     opacity: 1;
   }
 }
+
+
+// Mobile Styling ----------------------------
+@media only screen and (max-width: 600px) {
+  .content {
+    height: 115vh;
+  }
+  .instructions {
+    display: none;
+    max-width: 270px;
+    h4 {
+      font-size: 16px;
+    }
+  }
+  .camera-container {
+    display: flex;
+    flex-direction: column;
+    .camera-content {
+      padding: 20px;
+    }
+    .selection-container {
+      border-left: none;
+      border-right: none;
+      border-top: 2px solid $magic-mint;
+      border-bottom: 2px solid $magic-mint;
+      .camera-list {
+        height: 280px;
+        .camera-item {
+          font-size: 46px;
+        }
+      }
+    }
+    .camera-content {
+      p {
+        margin: 0px;
+      }
+      h1 {
+        font-size: 48px;
+      }
+      a {
+        font-size: 48px;
+      }
+    }
+  }
+}
