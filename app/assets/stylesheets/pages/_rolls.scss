@@ -455,11 +455,11 @@
   }
   .frame-grid-template {
     margin: 10px 20px 25px 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     .frame {
       .frame-image {
-        width: 88vw;
+        width: 45vw;
       }
       .delete-button-frame {
         top: 15px;
