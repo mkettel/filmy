@@ -380,5 +380,20 @@ body {
   .instructions {
     display: none;
   }
-
+  .camera-container {
+    margin: 0px;
+    max-width: 97%;
+    .camera-content {
+      h1 {
+        font-size: 58px;
+        margin: 20px;
+      }
+      p {
+        font-size: 58px;
+        line-height: 1.1;
+        text-align: center;
+        padding: 0px;
+      }
+    }
+  }
 }
