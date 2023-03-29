@@ -48,3 +48,10 @@
     }
   }
 }
+
+// media queries
+@media only screen and (max-width: 600px) {
+  .frame-addition-container {
+    padding: 20px;
+  }
+}
