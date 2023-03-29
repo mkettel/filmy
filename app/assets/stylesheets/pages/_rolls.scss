@@ -59,19 +59,19 @@
     transition: .3s;
     font-weight: 300;
     text-decoration: none;
+
     &:hover {
       cursor: pointer;
       color: $background;
       background-color: $blue-green;
+
     }
     a {
       color: $magic-mint;
       text-decoration: none;
       font-weight: 300;
     }
-    p {
-      margin: 0px;
-    }
+
     .delete-button-camera {
       display: none;
       font-size: 14px;
@@ -95,6 +95,7 @@
     a {
       color: $background;
     }
+
     .edit-button-camera {
       display: block;
       position: absolute;
@@ -265,5 +266,51 @@
   h3 {
     margin: 5px;
     padding: 0px;
+  }
+}
+
+// Media Queries
+@media only screen and (max-width: 600px) {
+  .back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    // margin: 20px 30px;
+    .back-button {
+      transition: .3s;
+      color: $magic-mint;
+      text-decoration: none;
+      font-size: 12.5px;
+      &:hover {
+        transition: .3s;
+        color: $blue-green;
+      }
+    }
+  }
+  .film-header-container {
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .rolls-container {
+    .roll-item {
+      overflow-x: scroll;
+      height: 100px;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: $blue-green;
+      }
+    }
+    .roll-item.active {
+      p {
+        color: $magic-mint;
+      }
+    }
+    p.active {
+      color: $magic-mint;
+    }
   }
 }
