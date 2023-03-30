@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/cameras/:camera_id/rolls/new', to: 'rolls#new'
   patch '/cameras/:camera_id/rolls/roll_id/frames/id', to: 'frames#update', as: :frameshit
 
-
   # this should make the upload image a POST to the roll database
   post '/upload_image/:frame_id', to: 'rolls#upload_image'
   # Defines the root path route ("/")
