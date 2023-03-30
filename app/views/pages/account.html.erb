@@ -9,7 +9,7 @@
   <div class="content-grid-container">
     <div class="left-container">
       <p>settings</p>
-      <p><%= link_to "log out", destroy_user_session_path, class: "link-button" %></p>
+      <p><%= link_to "log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "link-button" %></p>
     </div>
     <div class="right-container">
     </div>
