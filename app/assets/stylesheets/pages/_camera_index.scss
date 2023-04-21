@@ -114,7 +114,8 @@ body {
   border-right: 2px solid $magic-mint;
   .camera-list {
     height: 550px;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
