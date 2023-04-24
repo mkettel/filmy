@@ -12,4 +12,5 @@ export default class extends Controller {
       menu.classList.toggle("menu-open");
     });
   }
+
 }
