@@ -81,6 +81,13 @@ test:
 #
 production:
   <<: *default
-  database: filmy_production
-  username: filmy
-  password: <%= ENV["FILMY_DATABASE_PASSWORD"] %>
+  # database: filmy_production
+  # username: filmy
+  # password: <%= ENV["FILMY_DATABASE_PASSWORD"] %>
+
+  username: doadmin
+  password: AVNS_7UdC_5xlRES8boQ6MYC
+  host: db-postgresql-nyc1-47322-do-user-13057349-0.b.db.ondigitalocean.com
+  port: 25060
+  database: defaultdb
+  sslmode: require
